@@ -1,0 +1,42 @@
+button{
+    background: none;
+    border: none;
+}
+.header{
+    grid-area: h;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.header_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+}
+.search{
+    background:var(--secondary-background);
+    height: 75%;
+    display: flex;
+    border-radius: 12px;
+}
+.button{
+    padding: 0 1vw;
+}
+.form{
+    display: flex;
+    padding: 0.3vh 1.5vw 0.3vh 0;
+}
+.input{
+    background:none;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.bell{
+    margin: 0 1.5vw;
+}

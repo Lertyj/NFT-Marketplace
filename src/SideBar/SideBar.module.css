@@ -3,7 +3,7 @@ img{
     max-height: 100%;
 }
 .sidebar{
-    position: relative;
+    position: sticky;
     display: flex;
     flex-direction: column;
     max-height: 100vh;

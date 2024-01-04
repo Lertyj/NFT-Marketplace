@@ -9,6 +9,7 @@ function App(){
   return(
     <div className={styles.app_wrapper}>
       <Router>
+        <Header/>
         <SideBar/>
         <div className={styles.app_wrapper_content}>
           <Routes>

@@ -10,7 +10,7 @@
   /* начальный глобальный параметр */
   
   :root{ 
-    --main-color: red;
+    --main-color: #FFFFFF;
     --secondary-color: #6F4FF2;
     --main-background:#131129;
     --secondary-background: #1D1932;
