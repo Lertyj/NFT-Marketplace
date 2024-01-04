@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  body{
+    color: var(--main-color);
+    background: var(--main-background);
+  }
+  /* начальный глобальный параметр */
+  
+  :root{ 
+    --main-color: red;
+    --secondary-color: #6F4FF2;
+    --main-background:#131129;
+    --secondary-background: #1D1932;
+  }
+  
+  
+  /* параметр для лайт темы */
+  [data-theme="light"]{
+    --main-color:#000000;
+    --main-background:#F2F2F2;
+    --secondary-background: #FFFFFF;
+  }
