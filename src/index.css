@@ -1,7 +1,20 @@
-*{
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(./fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(./fonts/Poppins-SemiBold.ttf);
+}
+
+  *{
     margin: 0;
     padding: 0;
     border: none;
+    font-family: "Poppins-Regular";
+  }
+  h1,h2,h3,h4,h5,h6{
+    font-family: "Poppins-SemiBold";
   }
   body{
     color: var(--main-color);
@@ -11,9 +24,11 @@
   
   :root{ 
     --main-color: #FFFFFF;
-    --secondary-color: #6F4FF2;
+    --second-color: #6F4FF2;
+    --third-color: #6C7AA0;
+    --fourth-color: #68676E;
     --main-background:#131129;
-    --secondary-background: #1D1932;
+    --second-background: #1D1932;
   }
   
   
@@ -21,5 +36,5 @@
   [data-theme="light"]{
     --main-color:#000000;
     --main-background:#F2F2F2;
-    --secondary-background: #FFFFFF;
+    --second-background: #FFFFFF;
   }

@@ -17,7 +17,7 @@ button{
     height: auto;
 }
 .search{
-    background:var(--secondary-background);
+    background:var(--second-background);
     height: 75%;
     display: flex;
     border-radius: 12px;
@@ -31,6 +31,7 @@ button{
 }
 .input{
     background:none;
+    color: var(--fourth-color);
 }
 .buttons{
     display: flex;
@@ -40,3 +41,6 @@ button{
 .bell{
     margin: 0 1.5vw;
 }
+input:focus, textarea:focus, select:focus {
+    outline: none;
+}  

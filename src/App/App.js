@@ -3,6 +3,7 @@ import styles from "./App.module.css";
 import Header from "../Header/Header";
 import SideBar from "../SideBar/SideBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "../Content/Home/Home";
 
 
 function App(){
@@ -13,8 +14,8 @@ function App(){
         <SideBar/>
         <div className={styles.app_wrapper_content}>
           <Routes>
-            {/* <Route exact path='/dashboard' element={</>} />
-            <Route exact path='/bid' element={</>} />
+            <Route exact path='/' element={<Home/>} />
+            {/* <Route exact path='/bid' element={</>} />
             <Route exact path='/heart' element={</>} />
             <Route exact path='/collection' element={</>} />
             <Route exact path='/profile' element={</>} />

@@ -19,7 +19,7 @@ import Logo from '../icons/logo.svg';
 import styles from './SideBar.module.css';
 
 function SideBar() {
-    const [activePage, setActivePage] = useState('dashboard');
+    const [activePage, setActivePage] = useState('');
   
     const handlePageChange = (page) => {
       setActivePage(page);
@@ -31,8 +31,8 @@ function SideBar() {
               <div className={styles.item}>
               <img src={Logo} alt="Logo"/>
               </div>
-              <NavLink className={styles.item} to="/dashboard" onClick={() => handlePageChange('dashboard')}>
-                {activePage === 'dashboard' ? <img src={DashBoardActiveIcon} alt="Dashboard Active" /> : <img src={DashBoardInactiveIcon} alt="Dashboard Inactive" />}
+              <NavLink className={styles.item} to="/" onClick={() => handlePageChange('')}>
+                {activePage === '' ? <img src={DashBoardActiveIcon} alt="Dashboard Active" /> : <img src={DashBoardInactiveIcon} alt="Dashboard Inactive" />}
               </NavLink>
               <NavLink className={styles.item} to="/bid" onClick={() => handlePageChange('bid')}>
                 {activePage === 'bid' ? <img src={BidActiveIcon} alt="Bid Active" /> : <img src={BidInactiveIcon} alt="Bid Inactive" />}
