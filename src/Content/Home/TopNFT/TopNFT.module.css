@@ -1,0 +1,93 @@
+.container{
+    background:var(--second-background);
+    max-width:595px;
+    max-height: 227px;
+    border-radius: 18px;
+    width: 49%;
+}
+.content{
+    padding: 3%;
+    display: flex;
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 23px;
+
+}
+
+.nft{
+    max-width: 100%;
+    height: auto;
+    border-radius: 23px;
+    padding-right: 1vw;
+}
+.text{
+    max-width: 100%;
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+.profile{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+.avatar{
+    max-width: 43px;
+    max-height: 43px;
+    width: auto;
+    height: auto;
+}
+.profile_text{
+    padding: 0px 1vw;
+}
+.online{
+    background: #50BA23; 
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+.token{
+    display: flex;
+    flex-direction: column;
+}
+.token_information{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+.bid{
+    text-align: right;
+}
+.second_color{
+    color: var(--second-color)
+}
+.third_color{
+    font-size: 16px;
+    color: var(--third-color)
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.place{
+    background: #6F4FF2;
+    border-radius: 9px;
+    
+}
+.details{
+    background: #DC3546;
+    border-radius: 9px;
+}
+.button{
+    color:#FFF;
+    padding: 5% 0;
+    width:45%
+}

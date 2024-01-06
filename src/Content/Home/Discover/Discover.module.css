@@ -1,0 +1,48 @@
+.discover{
+    background: url(../../../icons/discover.jpg) no-repeat;
+    max-width: 595px;
+    width: 49%;
+    border-radius: 21px;
+    color: #FFF;
+}
+.content{
+    background: rgba(111, 79, 242, 0.50);
+    padding: 10px 10px 10px 10px;
+    max-width: 100%;
+    min-height: 207px;
+    border-radius: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+
+.discover h2{
+    max-width: 60%;
+}
+.discover p{
+    opacity: 50%;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    max-width: 50%;
+    font-size: 14px;
+    color:#FFF;
+    justify-content: space-between
+}
+.explore{
+    min-width: 45%;
+    background: #6F4FF2;
+    padding: 1vh 0 1vh 0;
+    border-radius: 9px;
+    color: #FFF;
+    
+}
+.create{
+    min-width: 45%;
+    background: #DC3546;
+    padding: 1vh 0 1vh 0;
+    border-radius: 9px;
+    color: #FFF;
+    
+}
