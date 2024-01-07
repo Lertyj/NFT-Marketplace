@@ -1,0 +1,79 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 7vh;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.select{
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
+.active{
+    background: #6F4FF2;
+    border-radius: 14px;
+    color: #FFF;
+}
+.item{
+    padding: 0 0.5vw;
+}
+.nft_auction{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3vh;
+    justify-content: space-between;
+}
+.nft{
+    background:var(--second-background);
+    border-radius: 18px;
+    width: 280px;
+    margin-bottom: 1.5vh;
+}
+.content{
+    padding: 1vh;
+    max-width: 100%;
+}
+.content img{
+    border-radius: 18px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.information{
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.bid{
+    text-align: right;
+}
+.minimum_bid{
+    color: var(--second-color)
+}
+.current_bid{
+    color: var(--third-color);
+    font-size: 16px;
+}
+.auction_time{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+.time{
+    color:var(--third-color)
+}
+.button{
+    margin-top: 2vh;
+    background:#6F4FF2;
+    border-radius: 9px;
+    padding: 0.5vh 0;
+    color: #FFF;
+}

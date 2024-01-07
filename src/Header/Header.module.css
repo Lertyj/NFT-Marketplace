@@ -4,10 +4,10 @@ button{
 }
 .header{
     grid-area: h;
-    max-height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 .header_content{
     display: flex;

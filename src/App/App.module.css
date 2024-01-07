@@ -9,7 +9,7 @@
     "n h"
     "n c ";
 
-    grid-template-rows: 100px 1fr ;
+    grid-template-rows: 75px 1fr ;
     grid-template-columns: 1fr 20fr;
     grid-gap: 5%;
 }
