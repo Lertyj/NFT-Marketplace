@@ -2,7 +2,8 @@ import React from "react";
 import Discover from "./Discover/Discover";
 import TopNFT from "./TopNFT/TopNFT";
 import styles from './Home.module.css'
-import TrendingBids from "./NFT-auction/NFT-auction";
+import TrendingBidsCards from "./NFT-auction/NFT-auction";
+import Analytical from "./Analytical/Analytical";
 function Home(){
     return(
         <>
@@ -11,9 +12,12 @@ function Home(){
             <TopNFT/>
         </div>
         <div className={styles.trendingBids}>
-            <TrendingBids/>
+            <TrendingBidsCards/>
         </div>
-        
+        <div className={styles.analytical}>
+            <Analytical/>
+        </div>
+
         </>
     )
 }

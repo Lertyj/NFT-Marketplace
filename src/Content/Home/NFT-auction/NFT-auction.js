@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './NFT-auction.module.css'
 import nft from '../../../icons/nft.jpg'
-function AuctionItem({ img, name, bid, currentBid, time }) {
+export function AuctionItem({ img, name, bid, currentBid, time }) {
     return (
       <div className={styles.nft}>
         <div className={styles.content}>
@@ -25,7 +25,7 @@ function AuctionItem({ img, name, bid, currentBid, time }) {
       </div>
     );
   }
-function TrendingBids(){
+function TrendingBidsCards(){
   return(
     <div className={styles.wrapper}>
       <div className={styles.title}>
@@ -51,4 +51,4 @@ function TrendingBids(){
   
 }
 
-export default TrendingBids;
+export default TrendingBidsCards;

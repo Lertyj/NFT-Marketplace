@@ -1,0 +1,8 @@
+.last-point{
+    display: none;
+}
+.chart{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
