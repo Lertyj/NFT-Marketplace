@@ -35,7 +35,7 @@
     margin-bottom: 1.5vh;
 }
 .content{
-    padding: 1vh;
+    padding: 6%;
     max-width: 100%;
 }
 .content img{
@@ -74,6 +74,6 @@
     margin-top: 2vh;
     background:#6F4FF2;
     border-radius: 9px;
-    padding: 0.5vh 0;
+    padding: 4% 0;
     color: #FFF;
 }

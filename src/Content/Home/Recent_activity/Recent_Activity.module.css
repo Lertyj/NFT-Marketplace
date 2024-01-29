@@ -1,0 +1,30 @@
+.wrapper{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+.title p{
+    color: var(--second-color);
+    cursor: pointer;
+}
+.block{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 2vh;
+    border-radius: 18px;
+    background: var(--second-background);
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.item{
+    border-bottom: solid 0.3px #D6DBDE;
+}

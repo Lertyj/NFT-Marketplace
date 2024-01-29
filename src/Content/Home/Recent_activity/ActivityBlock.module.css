@@ -1,0 +1,26 @@
+.wrapper{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+}
+
+.img{
+    max-width: 43px;
+}
+.information{
+    margin-left: 16px;
+    text-wrap:nowrap;
+}
+.time{
+    text-wrap: nowrap;
+    color:var(--fourth-color)
+}
+.item{
+    border-bottom:none;
+}

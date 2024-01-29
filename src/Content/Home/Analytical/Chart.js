@@ -26,7 +26,9 @@ var xScale = d3.scaleLinear()
 // Создание шкалы для оси Y
 var yScale = d3.scaleLinear()
   .domain([-8.5, d3.max(data, function(d) { return d.y; })])
-  .range([height, 115]);
+  .range([height, 115])
+  .domain([-10, 350])
+  .range([280, 10]);
 
 // Создание функции для отображения площади под линией
 var area = d3.area()
@@ -67,10 +69,6 @@ svg.append("path")
   .attr("cy", function(d) { return yScale(d.y); })
   .attr("r", 6.5)
   .attr("fill", "#6F4FF2");
-var yScale = d3.scaleLinear()
-  .domain([-6, 350])
-  .range([280, 10]);
-
 // Создайте ось Oy с использованием масштаба
 var yAxis = d3.axisLeft(yScale)
   .tickSize(0) // Установите размер черточек равным 0, чтобы убрать их
