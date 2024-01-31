@@ -35,11 +35,13 @@
     --fourth-color: #68676E;
     --main-background:#131129;
     --second-background: #1D1932;
+    --checkbox-background:#C4C4C4;
   }
   
   
   /* параметр для лайт темы */
   [data-theme="light"]{
+    --checkbox-background:none;
     --main-color:#000000;
     --main-background:#F2F2F2;
     --second-background: #FFFFFF;
