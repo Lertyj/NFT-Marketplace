@@ -1,6 +1,6 @@
 {
     "extends": [
-        "recommended"
+        "eslint-config-recommended"
     ],
     "parserOptions": {
         "ecmaVersion": 2018,
