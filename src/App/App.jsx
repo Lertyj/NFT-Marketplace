@@ -5,16 +5,15 @@ import SideBar from "../SideBar/SideBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../Content/Home/Home";
 
-
-function App(){
-  return(
+function App() {
+  return (
     <div className={styles.app_wrapper}>
       <Router>
-        <Header/>
-        <SideBar/>
+        <Header />
+        <SideBar />
         <div className={styles.app_wrapper_content}>
           <Routes>
-            <Route exact path='/' element={<Home/>} />
+            <Route exact path="/" element={<Home />} />
             {/* <Route exact path='/bid' element={</>} />
             <Route exact path='/heart' element={</>} />
             <Route exact path='/collection' element={</>} />
