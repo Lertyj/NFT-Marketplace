@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./Top_Creators.module.css";
 import classes from "./Creator_component.module.css";
 import avatar from "../../../icons/avatar.svg";

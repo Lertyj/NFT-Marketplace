@@ -1,6 +1,7 @@
 {
-    "extends": [
-        "eslint-config-recommended"
+    "extends": [ 
+        "eslint:recommended",
+        "plugin:react/recommended"
     ],
     "parserOptions": {
         "ecmaVersion": 2018,
@@ -10,6 +11,11 @@
         }
     },
     "rules": {
-        "indent": ["error", 2] // Указываем желаемый отступ (2 пробела в данном случае)
+        "indent": ["error", 2], // Указываем желаемый отступ (2 пробела в данном случае)
+        "react/prop-types": "off"
+    },
+    "env": {
+        "browser": true,
+        "node": true
     }
-    }  
+}  

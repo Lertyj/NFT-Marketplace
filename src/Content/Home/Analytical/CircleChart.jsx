@@ -56,5 +56,5 @@ export function CircleChart() {
       .style("stroke-width", 1.5); // Устанавливаем ширину обводки
   }, []);
 
-  return <div class="chart"></div>;
+  return <div className="chart"></div>;
 }

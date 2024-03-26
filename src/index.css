@@ -46,3 +46,17 @@
     --main-background:#F2F2F2;
     --second-background: #FFFFFF;
   }
+  button{
+    transition: opacity 0.3s;
+    cursor:pointer;
+  }
+  @media (hover: hover) {
+    button:hover{
+      opacity: .8;
+    }
+  }
+  @media (hover: none) {
+    button:active{
+      opacity: .8;
+    }
+  }

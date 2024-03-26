@@ -118,6 +118,6 @@ export function GraphicChart() {
       .attr("font-size", "12");
   }, []);
 
-  return <div class="gpraphic_chart"></div>;
+  return <div className="gpraphic_chart"></div>;
 }
 // Добавьте класс "last-point" к последней точке вашего графика
