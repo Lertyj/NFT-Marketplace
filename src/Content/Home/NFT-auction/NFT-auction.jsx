@@ -27,7 +27,7 @@ export function AuctionItem({ img, name, bid, currentBid, time }) {
     </div>
   );
 }
-function TrendingBidsCards() {
+function NFTAuction() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>
@@ -100,4 +100,4 @@ function TrendingBidsCards() {
   );
 }
 
-export default TrendingBidsCards;
+export default NFTAuction;
