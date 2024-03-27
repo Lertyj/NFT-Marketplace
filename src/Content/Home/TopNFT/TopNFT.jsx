@@ -14,7 +14,7 @@ function TopNFT() {
             <p className={styles.profile}>
               <img className={styles.avatar} src={avatar} alt="avatar" />
               <span className={styles.profile_text}>John Abraham</span>{" "}
-              <div className={styles.online}></div>
+              <span className={styles.online}></span>
             </p>
           </div>
           <div className={styles.information}>
