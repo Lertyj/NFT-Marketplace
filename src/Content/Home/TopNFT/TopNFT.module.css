@@ -66,7 +66,7 @@
     text-align: right;
 }
 .second_color{
-    color: var(--second-color)
+    color: var(--second-color);
 }
 .third_color{
     font-size: 16px;

@@ -52,8 +52,10 @@ export function ActiveBid({
     <div className={classes.wrapper}>
       <div className={classes.checkbox}>
         <label className={classes.label}>
-          <input type="checkbox" className={classes.real_checkbox} />
-          <span className={classes.custom_checkbox}></span>
+          <button>
+            <input type="checkbox" className={classes.real_checkbox} />
+            <span className={classes.custom_checkbox}></span>
+          </button>
         </label>
       </div>
       <div className={classes.item}>
@@ -78,9 +80,9 @@ export function ActiveBid({
       <div className={classes.time}>
         <p>{time}</p>
       </div>
-      <div className={classes.delete}>
+      <button className={classes.delete}>
         <span className={classes.cross}></span>
-      </div>
+      </button>
     </div>
   );
 }

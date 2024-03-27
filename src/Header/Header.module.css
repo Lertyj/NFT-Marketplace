@@ -43,4 +43,7 @@ button{
 }
 input:focus, textarea:focus, select:focus {
     outline: none;
-}  
+}
+.ProfileImage{
+    opacity: 0.9;
+}

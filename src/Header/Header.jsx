@@ -63,7 +63,7 @@ function Header() {
               alt="Search icon"
             />
           </button>
-          <button>
+          <button className={styles.ProfileImage}>
             <img src={ProfileImage} alt="Profile icon" />{" "}
           </button>
         </div>

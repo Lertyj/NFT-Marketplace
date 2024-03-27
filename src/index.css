@@ -49,14 +49,15 @@
   button{
     transition: opacity 0.3s;
     cursor:pointer;
+    opacity: .8;
   }
   @media (hover: hover) {
     button:hover{
-      opacity: .8;
+      opacity: 1;
     }
   }
   @media (hover: none) {
     button:active{
-      opacity: .8;
+      opacity: 1;
     }
   }
