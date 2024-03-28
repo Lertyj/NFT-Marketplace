@@ -71,6 +71,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Layout 
 
-[link](https://www.figma.com/community/file/1202503808074364164)
+Link to the layout of this site (project): [click](https://www.figma.com/community/file/1202503808074364164)
+
 
 
