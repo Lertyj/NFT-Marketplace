@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 import DashBoardActiveIcon from "../icons/dashboard-active.svg";
@@ -22,7 +22,14 @@ function SideBar() {
 
   const handlePageChange = (page) => {
     setActivePage(page);
+    localStorage.setItem("activePage", page);
   };
+  useEffect(() => {
+    const savedPage = localStorage.getItem("activePage");
+    if (savedPage) {
+      setActivePage(savedPage);
+    }
+  }, []);
   return (
     <div className={styles.sidebar}>
       <div className={styles.nav}>

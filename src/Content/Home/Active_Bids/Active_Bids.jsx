@@ -51,12 +51,12 @@ export function ActiveBid({
   return (
     <div className={classes.wrapper}>
       <div className={classes.checkbox}>
-        <label className={classes.label}>
-          <button>
+        <button>
+          <label className={classes.label}>
             <input type="checkbox" className={classes.real_checkbox} />
             <span className={classes.custom_checkbox}></span>
-          </button>
-        </label>
+          </label>
+        </button>
       </div>
       <div className={classes.item}>
         <img src={nft} alt={nft_alt} />

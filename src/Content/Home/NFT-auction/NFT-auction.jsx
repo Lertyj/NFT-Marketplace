@@ -39,62 +39,18 @@ function NFTAuction() {
         </div>
       </div>
       <div className={styles.nft_auction}>
-        <AuctionItem
-          img={nft}
-          name="Liquid Wave"
-          time="3h 1m 50s"
-          bid="0.05 ETH"
-          currentBid="0.15 ETH"
-        />
-        <AuctionItem
-          img={nft}
-          name="Liquid Wave"
-          time="3h 1m 50s"
-          bid="0.05 ETH"
-          currentBid="0.15 ETH"
-        />
-        <AuctionItem
-          img={nft}
-          name="Liquid Wave"
-          time="3h 1m 50s"
-          bid="0.05 ETH"
-          currentBid="0.15 ETH"
-        />
-        <AuctionItem
-          img={nft}
-          name="Liquid Wave"
-          time="3h 1m 50s"
-          bid="0.05 ETH"
-          currentBid="0.15 ETH"
-        />
-        <AuctionItem
-          img={nft}
-          name="Liquid Wave"
-          time="3h 1m 50s"
-          bid="0.05 ETH"
-          currentBid="0.15 ETH"
-        />
-        <AuctionItem
-          img={nft}
-          name="Liquid Wave"
-          time="3h 1m 50s"
-          bid="0.05 ETH"
-          currentBid="0.15 ETH"
-        />
-        <AuctionItem
-          img={nft}
-          name="Liquid Wave"
-          time="3h 1m 50s"
-          bid="0.05 ETH"
-          currentBid="0.15 ETH"
-        />
-        <AuctionItem
-          img={nft}
-          name="Liquid Wave"
-          time="3h 1m 50s"
-          bid="0.05 ETH"
-          currentBid="0.15 ETH"
-        />
+        {Array(8)
+          .fill()
+          .map((_, index) => (
+            <AuctionItem
+              key={index}
+              img={nft}
+              name="Liquid Wave"
+              time="3h 1m 50s"
+              bid="0.05 ETH"
+              currentBid="0.15 ETH"
+            />
+          ))}
       </div>
     </div>
   );
