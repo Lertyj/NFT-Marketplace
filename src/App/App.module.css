@@ -1,17 +1,23 @@
+.app_container{
+    color: var(--main-color);
+    background: var(--main-background);
+    height: 100%;
+    width: 100%;
+}
 .app_wrapper{
     display: grid;
     max-width: 1440px;
     margin: 0 auto;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     padding-right: 70px;
-
     grid-template-areas:
     "n h"
     "n c ";
 
     grid-template-rows: 75px 1fr ;
     grid-template-columns: 1fr 20fr;
-    grid-gap: 5%;
+    grid-gap: 50px;
 }
 .app_wrapper_content{
     grid-area: c;

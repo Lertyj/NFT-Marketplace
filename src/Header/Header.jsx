@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 import SearchLightThemeImage from "../icons/search-light.svg";
 import SearchDarkThemeImage from "../icons/search-dark.svg";
@@ -9,15 +9,22 @@ import DarkModeImage from "../icons/darkmode.svg";
 import LightModeImage from "../icons/lightmode.svg";
 
 function Header() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("theme") || "dark";
+  });
 
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
-  const bodyTheme = () => {
-    document.body.setAttribute("data-theme", theme);
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme); // Сохраняем выбранную тему в localStorage
   };
 
+  useEffect(() => {
+    const container = document.querySelector(".App_app_container__V-0Go");
+    if (container) {
+      container.setAttribute("data-theme", theme);
+    }
+  }, [theme]);
   return (
     <div className={styles.header}>
       <div className={styles.header_content}>
@@ -32,8 +39,8 @@ function Header() {
               <img
                 src={
                   theme === "light"
-                    ? SearchLightThemeImage
-                    : SearchDarkThemeImage
+                    ? SearchDarkThemeImage
+                    : SearchLightThemeImage
                 }
                 alt="Search icon"
               />
@@ -49,17 +56,16 @@ function Header() {
           <button
             onClick={() => {
               toggleTheme();
-              bodyTheme();
             }}
           >
             <img
-              src={theme === "light" ? LightModeImage : DarkModeImage}
+              src={theme === "light" ? DarkModeImage : LightModeImage}
               alt="Search icon"
             />
           </button>
           <button className={styles.bell}>
             <img
-              src={theme === "light" ? BellLightThemeImage : BellDarkThemeImage}
+              src={theme === "light" ? BellDarkThemeImage : BellLightThemeImage}
               alt="Search icon"
             />
           </button>

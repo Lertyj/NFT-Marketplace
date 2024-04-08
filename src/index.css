@@ -22,10 +22,6 @@
   P{
     font-size: 14px;
   }
-  body{
-    color: var(--main-color);
-    background: var(--main-background);
-  }
   /* начальный глобальный параметр */
   
   :root{ 

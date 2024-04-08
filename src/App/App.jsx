@@ -7,21 +7,23 @@ import Home from "../Content/Home/Home";
 
 function App() {
   return (
-    <div className={styles.app_wrapper}>
-      <Router>
-        <Header />
-        <SideBar />
-        <div className={styles.app_wrapper_content}>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            {/* <Route exact path='/bid' element={</>} />
+    <div className={styles.app_container}>
+      <div className={styles.app_wrapper}>
+        <Router>
+          <Header />
+          <SideBar />
+          <div className={styles.app_wrapper_content}>
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              {/* <Route exact path='/bid' element={</>} />
             <Route exact path='/heart' element={</>} />
             <Route exact path='/collection' element={</>} />
             <Route exact path='/profile' element={</>} />
             <Route exact path='/setting' element={</>} /> */}
-          </Routes>
-        </div>
-      </Router>
+            </Routes>
+          </div>
+        </Router>
+      </div>
     </div>
   );
 }
