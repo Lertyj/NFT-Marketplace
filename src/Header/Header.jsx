@@ -16,7 +16,7 @@ function Header() {
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
-    localStorage.setItem("theme", newTheme); // Сохраняем выбранную тему в localStorage
+    localStorage.setItem("theme", newTheme);
   };
 
   useEffect(() => {
