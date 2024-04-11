@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
-import SearchLightThemeImage from "../icons/search-light.svg";
-import SearchDarkThemeImage from "../icons/search-dark.svg";
-import ProfileImage from "../icons/profile.svg";
-import BellLightThemeImage from "../icons/bell-dark.svg";
-import BellDarkThemeImage from "../icons/bell-light.svg";
+import { ReactComponent as SearchImage } from "../icons/searchimage.svg";
+import ProfileImage from "../icons/profile-icon.svg";
+import { ReactComponent as BellImage } from "../icons/bellimage.svg";
 import DarkModeImage from "../icons/darkmode.svg";
 import LightModeImage from "../icons/lightmode.svg";
 
@@ -13,7 +11,7 @@ function Header() {
     return localStorage.getItem("theme") || "dark";
   });
 
-  const toggleTheme = () => {
+  const ToggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
@@ -25,6 +23,7 @@ function Header() {
       container.setAttribute("data-theme", theme);
     }
   }, [theme]);
+
   return (
     <div className={styles.header}>
       <div className={styles.header_content}>
@@ -36,14 +35,7 @@ function Header() {
             className={styles.form}
           >
             <button className={styles.button} type="button">
-              <img
-                src={
-                  theme === "light"
-                    ? SearchDarkThemeImage
-                    : SearchLightThemeImage
-                }
-                alt="Search icon"
-              />
+              <SearchImage className="svg" />
             </button>
             <input
               className={styles.input}
@@ -55,19 +47,16 @@ function Header() {
         <div className={styles.buttons}>
           <button
             onClick={() => {
-              toggleTheme();
+              ToggleTheme();
             }}
           >
             <img
               src={theme === "light" ? DarkModeImage : LightModeImage}
-              alt="Search icon"
+              alt="theme button"
             />
           </button>
           <button className={styles.bell}>
-            <img
-              src={theme === "light" ? BellDarkThemeImage : BellLightThemeImage}
-              alt="Search icon"
-            />
+            <BellImage className="svg" />
           </button>
           <button className={styles.ProfileImage}>
             <img src={ProfileImage} alt="Profile icon" />{" "}

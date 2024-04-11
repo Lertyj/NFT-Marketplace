@@ -22,7 +22,8 @@
     background: var(--checkbox-background);
     border: 1px solid #A5A5A5;
 }
-.custom_checkbox::before{
+:root{
+    .custom_checkbox::before{
     content:'';
     display: inline-block;
     width: 8px;
@@ -37,6 +38,14 @@
     transition: .2s ease-in ;
     margin-top: 1px;
 }
+}
+[data-theme="dark"]{
+    .custom_checkbox::before{
+        background: url(../../../icons/mark.svg);
+        background-repeat: no-repeat;
+    }
+  }
+
 .real_checkbox:checked + .custom_checkbox::before{
     transform:translate(-50%,-50%) scale(1);
 }

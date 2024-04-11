@@ -23,11 +23,13 @@ button{
     border-radius: 12px;
 }
 .button{
-    padding: 0 1vw;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 .8rem;
 }
 .form{
     display: flex;
-    padding: 0.3vh 1.5vw 0.3vh 0;
+    padding: .4rem 2rem .4rem 0;
 }
 .input{
     background:none;

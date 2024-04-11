@@ -22,6 +22,15 @@
   P{
     font-size: 14px;
   }
+  .svg {
+    fill:var(--main-fill);
+  }
+  .active svg{
+    fill: var(--active-menu-fill);
+  }
+  .menu_item{
+    fill:var(--main-menu-fill);
+  }
   /* начальный глобальный параметр */
   
   :root{ 
@@ -32,6 +41,9 @@
     --main-background:#131129;
     --second-background: #1D1932;
     --checkbox-background:#C4C4C4;
+    --main-fill: #FFFFFF;
+    --main-menu-fill: #65646A;
+    --active-menu-fill: #6E50EF;
   }
   
   
@@ -41,6 +53,7 @@
     --main-color:#000000;
     --main-background:#F2F2F2;
     --second-background: #FFFFFF;
+    --main-fill: #66656b;
   }
   button{
     transition: opacity 0.3s;
