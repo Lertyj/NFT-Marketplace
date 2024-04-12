@@ -7,16 +7,9 @@
 .content{
     margin-top: 2vh;
 }
-.item{
-    background:var(--second-background);
-    border-radius: 18px;
-    margin-bottom: 20px;
-}
 .last{
     margin-bottom: 0px;
 }
-.bid_title{
-    max-width: 100%;
-    border-bottom: 0.3px solid #6C7AA0;
-    margin: 4vh 0;
+.table_wrapper{
+    width: 100%;
 }
