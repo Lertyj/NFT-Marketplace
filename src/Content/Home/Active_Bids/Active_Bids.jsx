@@ -1,11 +1,8 @@
 import React from "react";
 import styles from "./Active_Bids.module.css";
 import classes from "./Bid_component.module.css";
-import nft1 from "../../../icons/nft-third.jpg";
-import nft2 from "../../../icons/nft-fourth.jpg";
-import nft3 from "../../../icons/nft-fifth.jpg";
-import nft4 from "../../../icons/nft.jpg";
-import avatar from "../../../icons/avatar1.svg";
+import { bidsData } from "./Active_Bids_data";
+
 export function BidTitle() {
   return (
     <tr className={`${classes.wrapper} ${classes.bids_title}`}>
@@ -73,16 +70,18 @@ export function ActiveBid({
       </td>
       <td className={classes.recent_offer}>
         <img src={avatar} alt={avatar_alt} />
-        <td className={classes.recent_information}>
+        <div className={classes.recent_information}>
           <p>{recent_offer}</p>
-        </td>
+        </div>
       </td>
       <td className={classes.time}>
         <p>{time}</p>
       </td>
-      <button className={classes.delete}>
-        <span className={classes.cross}></span>
-      </button>
+      <td className={classes.delete}>
+        <button>
+          <span className={classes.cross}></span>
+        </button>
+      </td>
     </tr>
   );
 }
@@ -95,57 +94,12 @@ function ActiveBids() {
       </div>
       <div className={styles.content}>
         <table className={styles.table_wrapper}>
-          <BidTitle />
-          <ActiveBid
-            nft={nft1}
-            nft_name="Cute Cube Cool"
-            nft_owner="John Abraham"
-            open_price="0.0025 ETH"
-            your_offer="0.0025 ETH"
-            avatar={avatar}
-            recent_offer="0.0025 ETH"
-            time="2 Hours 1 min 30s"
-          />
-          <ActiveBid
-            nft={nft2}
-            nft_name="Liquid Wave"
-            nft_owner="John Abraham"
-            open_price="0.0025 ETH"
-            your_offer="0.0025 ETH"
-            avatar={avatar}
-            recent_offer="0.0025 ETH"
-            time="2 Hours 1 min 30s"
-          />
-          <ActiveBid
-            nft={nft1}
-            nft_name="Cute Cube Cool"
-            nft_owner="John Abraham"
-            open_price="0.0025 ETH"
-            your_offer="0.0025 ETH"
-            avatar={avatar}
-            recent_offer="0.0025 ETH"
-            time="2 Hours 1 min 30s"
-          />
-          <ActiveBid
-            nft={nft3}
-            nft_name="Liquid Wave"
-            nft_owner="John Abraham"
-            open_price="0.0025 ETH"
-            your_offer="0.0025 ETH"
-            avatar={avatar}
-            recent_offer="0.0025 ETH"
-            time="2 Hours 1 min 30s"
-          />
-          <ActiveBid
-            nft={nft4}
-            nft_name="Liquid Wave"
-            nft_owner="John Abraham"
-            open_price="0.0025 ETH"
-            your_offer="0.0025 ETH"
-            avatar={avatar}
-            recent_offer="0.0025 ETH"
-            time="2 Hours 1 min 30s"
-          />
+          <tbody>
+            <BidTitle />
+            {bidsData.map((bid, index) => (
+              <ActiveBid key={index} {...bid} />
+            ))}
+          </tbody>
         </table>
       </div>
     </div>

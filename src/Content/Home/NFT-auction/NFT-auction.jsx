@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./NFT-auction.module.css";
-import nft from "../../../icons/nft.jpg";
+import { nftData } from "./nftData.jsx";
 export function AuctionItem({ img, name, bid, currentBid, time }) {
   return (
     <div className={styles.nft}>
@@ -39,18 +39,12 @@ function NFTAuction() {
         </div>
       </div>
       <div className={styles.nft_auction}>
-        {Array(8)
-          .fill()
-          .map((_, index) => (
-            <AuctionItem
-              key={index}
-              img={nft}
-              name="Liquid Wave"
-              time="3h 1m 50s"
-              bid="0.05 ETH"
-              currentBid="0.15 ETH"
-            />
-          ))}
+        {nftData.length > 0 &&
+          Array(8)
+            .fill()
+            .map((_, index) => (
+              <AuctionItem key={index} {...nftData[index % nftData.length]} />
+            ))}
       </div>
     </div>
   );

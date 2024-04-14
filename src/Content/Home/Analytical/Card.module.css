@@ -22,6 +22,21 @@
     justify-content: center;
     border-radius: 50%;
 }
+.greenbg{
+    background:#50BB25;
+}
+.redbg{
+    background:#DC3546;
+}
+.purplebg{
+    background:#6F4FF2;
+}
+.greencolor{
+    color: #50BB25;
+}
+.redcolor{
+    color:#DC3546;
+}
 .card img{
     max-width: 19px;
     max-height: 19px;

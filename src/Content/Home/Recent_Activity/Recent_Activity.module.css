@@ -28,3 +28,6 @@
 .item{
     border-bottom: solid 0.3px #D6DBDE;
 }
+.item:last-child{
+    border-bottom: none;
+}

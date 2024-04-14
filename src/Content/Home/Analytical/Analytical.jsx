@@ -1,23 +1,23 @@
 import React from "react";
 import styles from "./Analytical.module.css";
-import wallet from "../../../icons/wallet.svg";
-import art from "../../../icons/sheet.svg";
 import classes from "./Card.module.css";
 import { CircleChart } from "./CircleChart";
 import { GraphicChart } from "./Chart";
 import "./chart.css";
-export function Card({ img, number, industry, percent, color, pColor }) {
-  const imgStyle = {
-    background: color,
-  };
-  const pStyle = {
-    color: pColor,
-  };
+import { cardData } from "./CardData";
+export function Card({
+  img,
+  number,
+  industry,
+  percent,
+  classnameimg,
+  classnamep,
+}) {
   return (
     <div className={classes.card}>
       <div className={classes.content}>
         <div className={classes.information}>
-          <div className={classes.img} style={imgStyle}>
+          <div className={`${classes.img} ${classes[classnameimg]}`}>
             <img src={img} alt={industry} />
           </div>
           <div className={classes.text}>
@@ -25,8 +25,8 @@ export function Card({ img, number, industry, percent, color, pColor }) {
             <p>{industry}</p>
           </div>
         </div>
-        <div className={classes.percent}>
-          <p style={pStyle}>{percent}</p>
+        <div className={`${classes.percent} ${classes[classnamep]}`}>
+          <p>{percent}</p>
         </div>
       </div>
     </div>
@@ -40,30 +40,11 @@ function Analytical() {
         <div className={styles.bids}>
           <h2 className={styles.title}>Trending Bids</h2>
           <div className={styles.cards}>
-            <Card
-              img={wallet}
-              number="24K"
-              industry="Artworks"
-              percent="+168.001%"
-              color="#6F4FF2"
-              pColor="#50BB25"
-            />
-            <Card
-              img={art}
-              number="89"
-              industry="Auction"
-              percent="-168.001%"
-              color="#DC3546"
-              pColor="#DC3546"
-            />
-            <Card
-              img={wallet}
-              number="82K"
-              industry="Creators"
-              percent="+168.001%"
-              color="#50BB25"
-              pColor="#50BB25"
-            />
+            {cardData.map((card, index) => (
+              <li className={styles.item} key={index}>
+                <Card key={index} {...card} />
+              </li>
+            ))}
           </div>
         </div>
         <div className={styles.price}>

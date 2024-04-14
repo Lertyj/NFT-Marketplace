@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Top_Creators.module.css";
 import classes from "./Creator_component.module.css";
-import avatar from "../../../icons/avatar.svg";
+import { creatorsData } from "./Top_CreatorData";
 
 export function CreatorComponent({ avatar, nickname, projects, value }) {
   return (
@@ -36,72 +36,11 @@ function TopCreators() {
       </div>
       <div className={styles.content}>
         <ul>
-          <li>
-            <CreatorComponent
-              avatar={avatar}
-              nickname="Papaya"
-              projects="60 items"
-              value="Follow"
-            />
-          </li>
-          <li>
-            <CreatorComponent
-              avatar={avatar}
-              nickname="Papaya"
-              projects="60 items"
-              value="Follow"
-            />
-          </li>
-          <li>
-            <CreatorComponent
-              avatar={avatar}
-              nickname="Papaya"
-              projects="60 items"
-              value="Follow"
-            />
-          </li>
-          <li>
-            <CreatorComponent
-              avatar={avatar}
-              nickname="Papaya"
-              projects="60 items"
-              value="Follow"
-            />
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <CreatorComponent
-              avatar={avatar}
-              nickname="Papaya"
-              projects="60 items"
-              value="Follow"
-            />
-          </li>
-          <li>
-            <CreatorComponent
-              avatar={avatar}
-              nickname="Papaya"
-              projects="60 items"
-              value="Follow"
-            />
-          </li>
-          <li>
-            <CreatorComponent
-              avatar={avatar}
-              nickname="Papaya"
-              projects="60 items"
-              value="Follow"
-            />
-          </li>
-          <li>
-            <CreatorComponent
-              avatar={avatar}
-              nickname="Papaya"
-              projects="60 items"
-              value="Follow"
-            />
-          </li>
+          {creatorsData.map((creator, index) => (
+            <li className={styles.item} key={index}>
+              <CreatorComponent key={index} {...creator} />
+            </li>
+          ))}
         </ul>
       </div>
     </div>

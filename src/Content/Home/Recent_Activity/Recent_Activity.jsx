@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Recent_Activity.module.css";
 import classes from "./ActivityBlock.module.css";
-import avatar from "../../../icons/avatar.svg";
+import { recentData } from "./Recent_ActivityData";
 function Activity({ avatar, nickname, event, time }) {
   return (
     <div className={classes.wrapper}>
@@ -29,46 +29,11 @@ function RecentActivity() {
       <div className={styles.block}>
         <div className={styles.content}>
           <ul>
-            <li className={styles.item}>
-              <Activity
-                avatar={avatar}
-                nickname="Papaya"
-                event="Purchase by you for 0.05 ETH"
-                time="12 mins ago"
-              />
-            </li>
-            <li className={styles.item}>
-              <Activity
-                avatar={avatar}
-                nickname="Papaya"
-                event="0.06 ETH Received"
-                time="12 mins ago"
-              />
-            </li>
-            <li className={styles.item}>
-              <Activity
-                avatar={avatar}
-                nickname="Papaya"
-                event="Started Following you"
-                time="12 mins ago"
-              />
-            </li>
-            <li className={styles.item}>
-              <Activity
-                avatar={avatar}
-                nickname="Papaya"
-                event="Has been sold by 12.75 ETH"
-                time="12 mins ago"
-              />
-            </li>
-            <li>
-              <Activity
-                avatar={avatar}
-                nickname="Papaya"
-                event="Purchase by you for 0.05 ETH"
-                time="12 mins ago"
-              />
-            </li>
+            {recentData.map((recent, index) => (
+              <li className={styles.item} key={index}>
+                <Activity key={index} {...recent} />
+              </li>
+            ))}
           </ul>
         </div>
       </div>
