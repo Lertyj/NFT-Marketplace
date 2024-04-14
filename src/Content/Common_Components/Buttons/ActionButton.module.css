@@ -1,0 +1,19 @@
+.button{
+    padding: 0.8rem;
+    background: var(--main-button-background);
+    width: 100%;
+    color: var(--main-button-color);
+    border-radius: 9px;
+}
+.twice_purple, .twice_red{
+    width: 45%;
+}
+.twice_red{
+    background: var(--second-button-background);
+}
+.follow{
+    padding: 0.2em 1.5em;
+    background: none;
+    border: 1px solid #6F4FF2;
+    color: var(--main-color)
+}

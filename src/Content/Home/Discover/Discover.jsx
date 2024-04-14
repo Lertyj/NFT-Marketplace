@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Discover.module.css";
+import ActionButton from "../../Common_Components/Buttons/ActionButton";
 function Discover() {
   return (
     <div className={styles.discover}>
@@ -9,24 +10,8 @@ function Discover() {
           Digital marketplace for crypto collectibles and non fungable tokens
         </p>
         <div className={styles.buttons}>
-          <button
-            onClick={() => {
-              return false;
-            }}
-            type="button"
-            className={styles.explore}
-          >
-            Explore
-          </button>
-          <button
-            onClick={() => {
-              return false;
-            }}
-            type="button"
-            className={styles.create}
-          >
-            Create
-          </button>
+          <ActionButton text="Explore" classname="twice_purple" />
+          <ActionButton text="Create" classname="twice_red" />
         </div>
       </div>
     </div>

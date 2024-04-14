@@ -16,10 +16,3 @@
     display: flex;
     flex-direction: column;
 }
-.button{
-    padding: 2px 16px;
-    background: none;
-    border: 1px solid #6F4FF2;
-    color:var(--main-color);
-    border-radius: 9px;
-}

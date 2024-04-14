@@ -26,23 +26,5 @@
     display: flex;
     flex-direction: row;
     max-width: 50%;
-    font-size: 14px;
-    color:#FFF;
     justify-content: space-between
-}
-.explore{
-    min-width: 45%;
-    background: #6F4FF2;
-    padding: 5%;
-    border-radius: 9px;
-    color: #FFF;
-    
-}
-.create{
-    min-width: 45%;
-    background: #DC3546;
-    padding: 5%;
-    border-radius: 9px;
-    color: #FFF;
-    
 }

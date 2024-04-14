@@ -77,17 +77,3 @@
     flex-direction: row;
     justify-content: space-between;
 }
-.place{
-    background: #6F4FF2;
-    border-radius: 9px;
-    
-}
-.details{
-    background: #DC3546;
-    border-radius: 9px;
-}
-.button{
-    color:#FFF;
-    padding: 5% 0;
-    width:45%
-}

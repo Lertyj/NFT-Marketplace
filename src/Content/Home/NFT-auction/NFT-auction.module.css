@@ -47,10 +47,11 @@
     flex-wrap: nowrap;
 }
 .information{
-    margin-top: 1vh;
+    margin-top: 0.8em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 2em;
 }
 .bid{
     text-align: right;
@@ -69,11 +70,4 @@
 }
 .time{
     color:var(--third-color)
-}
-.button{
-    margin-top: 2vh;
-    background:#6F4FF2;
-    border-radius: 9px;
-    padding: 4% 0;
-    color: #FFF;
 }

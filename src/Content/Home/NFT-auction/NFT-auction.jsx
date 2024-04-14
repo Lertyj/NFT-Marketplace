@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./NFT-auction.module.css";
 import { nftData } from "./nftData.jsx";
+import ActionButton from "../../Common_Components/Buttons/ActionButton.jsx";
 export function AuctionItem({ img, name, bid, currentBid, time }) {
   return (
     <div className={styles.nft}>
@@ -21,7 +22,7 @@ export function AuctionItem({ img, name, bid, currentBid, time }) {
               <p className={styles.current_bid}>{currentBid}</p>
             </div>
           </div>
-          <button className={styles.button}>Place a Bid</button>
+          <ActionButton text="Place a bid" />
         </div>
       </div>
     </div>

@@ -2,8 +2,9 @@ import React from "react";
 import styles from "./Top_Creators.module.css";
 import classes from "./Creator_component.module.css";
 import { creatorsData } from "./Top_CreatorData";
+import ActionButton from "../../Common_Components/Buttons/ActionButton";
 
-export function CreatorComponent({ avatar, nickname, projects, value }) {
+export function CreatorComponent({ avatar, nickname, projects }) {
   return (
     <div className={classes.wrapper}>
       <div className={classes.content}>
@@ -14,15 +15,7 @@ export function CreatorComponent({ avatar, nickname, projects, value }) {
         </div>
       </div>
       <div className={classes.block_button}>
-        <button
-          onClick={() => {
-            return false;
-          }}
-          type="button"
-          className={classes.button}
-        >
-          {value}
-        </button>
+        <ActionButton text="Follow" classname="follow" />
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./TopNFT.module.css";
 import avatar from "../../../icons/avatar.svg";
 import NFT from "../../../icons/nft-second.jpg";
+import ActionButton from "../../Common_Components/Buttons/ActionButton";
 function TopNFT() {
   return (
     <div className={styles.container}>
@@ -36,24 +37,8 @@ function TopNFT() {
             </div>
           </div>
           <div className={styles.buttons}>
-            <button
-              onClick={() => {
-                return false;
-              }}
-              type="button"
-              className={`${styles.place} ${styles.button}`}
-            >
-              Place a Bid
-            </button>
-            <button
-              onClick={() => {
-                return false;
-              }}
-              type="button"
-              className={`${styles.details} ${styles.button}`}
-            >
-              Details
-            </button>
+            <ActionButton text="Place a bid" classname="twice_purple" />
+            <ActionButton text="Details" classname="twice_red" />
           </div>
         </div>
       </div>
