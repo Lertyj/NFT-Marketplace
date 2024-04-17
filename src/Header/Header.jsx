@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Header.module.css";
 import { ReactComponent as SearchImage } from "../icons/searchimage.svg";
-import ProfileImage from "../icons/profile-icon.svg";
+import { ReactComponent as ProfileImage } from "../icons/profile-icon.svg";
 import { ReactComponent as BellImage } from "../icons/bellimage.svg";
 import ThemeManager from "../ThemeManager/ThemeManager";
 
@@ -32,7 +32,7 @@ function Header() {
             <BellImage className="svg" />
           </button>
           <button className={styles.ProfileImage}>
-            <img src={ProfileImage} alt="Profile icon" />{" "}
+            <ProfileImage />
           </button>
         </div>
       </div>

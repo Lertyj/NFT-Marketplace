@@ -5,11 +5,30 @@
     max-width: 100%;
 }
 .content{
-    margin-top: 2vh;
+    margin-top: 1em;
+    overflow-x: auto;
+    max-width: 85lvw;
 }
 .last{
     margin-bottom: 0px;
 }
 .table_wrapper{
     width: 100%;
+
+}
+.content::-webkit-scrollbar{
+    background:none;
+    width: 90%;
+    height: 20px;
+    border-radius:13px;
+    border: 1px solid #FFFAFA;
+}
+.content::-webkit-scrollbar-thumb{
+    background-color:#FFFAFA;
+    border-radius:13px
+}
+@media screen and (max-width: 768px){
+    .content{
+        max-width: 92lvw;
+    }
 }

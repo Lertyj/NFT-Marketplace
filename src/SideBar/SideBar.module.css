@@ -3,6 +3,7 @@ img{
     max-height: 100%;
 }
 .sidebar{
+    grid-area: n;
     max-width: 80px;
     min-width: 65px;
 }
@@ -35,4 +36,36 @@ img{
 }
 .iconnn{
     fill: red;
+}
+@media screen and (max-width: 768px){
+    .sidebar{
+        position: fixed;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        max-height: 50px;
+        min-height: 50px;
+        min-width: 100%;
+        max-width: 100%;
+        background: var(--second-background);
+        align-items: center
+    }
+    .sidebar_wrapper{
+        min-height: 0;
+        flex-direction: row;
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .nav nav{
+        flex-direction: row;
+        padding-top: 0;
+    }
+    .item{
+        padding: 0 1em 0 1em;
+    }
+    .logo{
+        display: none;
+    }
 }

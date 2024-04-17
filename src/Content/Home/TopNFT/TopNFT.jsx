@@ -1,20 +1,20 @@
 import React from "react";
 import styles from "./TopNFT.module.css";
 import avatar from "../../../icons/avatar.svg";
-import NFT from "../../../icons/nft-second.jpg";
+import NFT from "../../../icons/nft-second.svg";
 import ActionButton from "../../Common_Components/Buttons/ActionButton";
 function TopNFT() {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.nft}>
-          <img className={styles.img} src={NFT} alt="NFT" />
+          <img src={NFT} alt="nft" />
         </div>
         <div className={styles.text}>
           <div>
             <p className={styles.profile}>
               <img className={styles.avatar} src={avatar} alt="avatar" />
-              <span className={styles.profile_text}>John Abraham</span>{" "}
+              <span className={styles.profile_text}>John Abraham</span>
               <span className={styles.online}></span>
             </p>
           </div>

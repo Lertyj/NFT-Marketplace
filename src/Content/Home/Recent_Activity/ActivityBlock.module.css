@@ -21,3 +21,8 @@
     text-wrap: nowrap;
     color:var(--fourth-color)
 }
+@media screen and (max-width: 1280px){
+    .wrapper{
+        padding: 16px;
+    }
+}

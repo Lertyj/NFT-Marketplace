@@ -1,15 +1,17 @@
 .discover{
-    background: url(../../../icons/discover.jpg) no-repeat;
+    background: url(../../../icons/discover.svg) no-repeat;
+    background-size:cover;
     max-width: 595px;
     width: 49%;
     border-radius: 21px;
     color: #FFF;
+    min-width: 383px;
 }
 .content{
     background: rgba(111, 79, 242, 0.50);
-    padding: 10px 10px 10px 1vw;
+    padding: 1em;
     max-width: 100%;
-    min-height: 207px;
+    min-height: 195px;
     border-radius: 21px;
     display: flex;
     flex-direction: column;
@@ -17,7 +19,7 @@
 }
 
 .discover h2{
-    max-width: 60%;
+    max-width: 70%;
 }
 .discover p{
     opacity: 50%;
@@ -27,4 +29,19 @@
     flex-direction: row;
     max-width: 50%;
     justify-content: space-between
+}
+@media screen and (max-width: 1280px){
+    .discover{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1080px){
+    .discover h2{
+        max-width: 80%;
+    }
+}
+@media screen and (max-width: 768px){
+    .discover h2{
+        max-width: 100%;
+    }
 }

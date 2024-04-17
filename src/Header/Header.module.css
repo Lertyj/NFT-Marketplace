@@ -18,7 +18,6 @@ button{
 }
 .search{
     background:var(--second-background);
-    height: 75%;
     display: flex;
     border-radius: 12px;
 }

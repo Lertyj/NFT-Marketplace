@@ -24,28 +24,4 @@ export const creatorsData = [
     projects: "60 items",
     value: "Follow",
   },
-  {
-    avatar: avatar,
-    nickname: "Papaya",
-    projects: "60 items",
-    value: "Follow",
-  },
-  {
-    avatar: avatar,
-    nickname: "Papaya",
-    projects: "60 items",
-    value: "Follow",
-  },
-  {
-    avatar: avatar,
-    nickname: "Papaya",
-    projects: "60 items",
-    value: "Follow",
-  },
-  {
-    avatar: avatar,
-    nickname: "Papaya",
-    projects: "60 items",
-    value: "Follow",
-  },
 ];

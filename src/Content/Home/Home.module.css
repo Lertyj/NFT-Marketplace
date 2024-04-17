@@ -1,17 +1,33 @@
 .cards{
     display: flex;
-    flex-direction: row;
-    max-width: 100%;
-    justify-content: space-between
+    justify-content: space-between;
+
 }
 .recent_creators{
-    margin-top: 6vh;
+    margin-top: 3em;
     display:flex;
     flex-direction: row;
     max-width: 100%;
     justify-content: space-between;
     height: auto;
+    flex-wrap: wrap;
 }
 .active_bids{
-    margin-top: 6vh;
+    margin-top: 3em;
+}
+@media screen and (max-width: 1280px){
+    .cards{
+        flex-direction: column;
+        align-items:normal;
+        max-width: fit-content;
+    }
+    .recent_creators{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 768px){
+    .cards{
+        align-items: center;
+        max-width: 100%;
+    }
 }

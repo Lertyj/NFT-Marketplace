@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./NFT-auction.module.css";
 import { nftData } from "./nftData.jsx";
 import ActionButton from "../../Common_Components/Buttons/ActionButton.jsx";
+
 export function AuctionItem({ img, name, bid, currentBid, time }) {
   return (
     <div className={styles.nft}>
@@ -40,12 +41,15 @@ function NFTAuction() {
         </div>
       </div>
       <div className={styles.nft_auction}>
-        {nftData.length > 0 &&
-          Array(8)
-            .fill()
-            .map((_, index) => (
-              <AuctionItem key={index} {...nftData[index % nftData.length]} />
-            ))}
+        {Array(8)
+          .fill()
+          .map((_, index) => (
+            <AuctionItem
+              className={styles.auction_item}
+              key={index}
+              {...nftData[index % nftData.length]}
+            />
+          ))}
       </div>
     </div>
   );

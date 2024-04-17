@@ -24,7 +24,7 @@ function RecentActivity() {
     <div className={styles.wrapper}>
       <div className={styles.title}>
         <h3>Recent Activity</h3>
-        <p>See more</p>
+        <button> See more </button>
       </div>
       <div className={styles.block}>
         <div className={styles.content}>

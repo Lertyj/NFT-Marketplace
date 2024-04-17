@@ -1,19 +1,25 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    margin-top: 6vh;
+    margin-top: 4em;
     max-width: 100%;
-}
+    
 
+}
+.bids{
+    min-width: 290px;
+    width: 25%;
+}
 .graphics {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    grid-gap:1.3%;
     justify-content: space-between;
 }
 
 .title {
-    margin-bottom: 2vh;
+    margin-bottom: 1em;
 }
 
 .cards {
@@ -23,31 +29,42 @@
     min-width: 290px;
     justify-content: space-between;
 }
-
+.price{
+    width: 42%;
+}
+.price_content svg{
+    width: 100%;
+}
 .price_content {
     background: var(--second-background);
     padding: 25px;
     border-radius: 18px;
     height: 280px;
 }
-
+.statistics{
+    width: 28%;
+}
 .statistics_content {
     display: flex;
     flex-direction: column;
     background: var(--second-background);
     padding: 10px 25px 20px 25px;
     border-radius: 18px;
-    width: 300px;
+    text-wrap: nowrap;
+    align-items: center;
 }
 .data{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 2vh;
+    margin-top: 2em;
 }
 .data p{
     display: flex;
     align-items:center;
+}
+.data_cancel{
+    margin-left: .8em;
 }
 .data span{
     display: inline-block;
@@ -62,4 +79,29 @@
 }
 .dara_cancel{
     background:rgba(111,79,242,.1);
+}
+
+@media screen and (max-width: 1282px){
+    .graphics{
+        grid-gap: 4%;
+        justify-content: normal;
+    }
+    .bids{
+        width: 35%;
+    }
+    .price{
+        width: auto;
+    }
+    .statistics{
+        width: auto;
+        margin-top: 3em;
+    }
+}
+@media screen and (max-width: 1080px){
+    .price{
+        margin-top: 3em;
+    }
+    .bids{
+        width: 100%;
+    }
 }

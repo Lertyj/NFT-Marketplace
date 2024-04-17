@@ -35,6 +35,13 @@ function TopCreators() {
             </li>
           ))}
         </ul>
+        <ul>
+          {creatorsData.map((creator, index) => (
+            <li className={styles.item} key={index}>
+              <CreatorComponent key={index} {...creator} />
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
