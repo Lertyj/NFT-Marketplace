@@ -1,8 +1,65 @@
 import nft from "../../../icons/nft.jpg";
-
+import nft2 from "../../../icons/nft-book.jpg";
 export const nftData = [
   {
+    type: "ArtWork",
     img: nft,
+    name: "Liquid Wave",
+    time: "3h 1m 50s",
+    bid: "0.05 ETH",
+    currentBid: "0.15 ETH",
+  },
+  {
+    type: "Book",
+    img: nft2,
+    name: "Liquid Wave",
+    time: "3h 1m 50s",
+    bid: "0.05 ETH",
+    currentBid: "0.15 ETH",
+  },
+  {
+    type: "ArtWork",
+    img: nft,
+    name: "Liquid Wave",
+    time: "3h 1m 50s",
+    bid: "0.05 ETH",
+    currentBid: "0.15 ETH",
+  },
+  {
+    type: "Book",
+    img: nft2,
+    name: "Liquid Wave",
+    time: "3h 1m 50s",
+    bid: "0.05 ETH",
+    currentBid: "0.15 ETH",
+  },
+  {
+    type: "ArtWork",
+    img: nft,
+    name: "Liquid Wave",
+    time: "3h 1m 50s",
+    bid: "0.05 ETH",
+    currentBid: "0.15 ETH",
+  },
+  {
+    type: "Book",
+    img: nft2,
+    name: "Liquid Wave",
+    time: "3h 1m 50s",
+    bid: "0.05 ETH",
+    currentBid: "0.15 ETH",
+  },
+  {
+    type: "ArtWork",
+    img: nft,
+    name: "Liquid Wave",
+    time: "3h 1m 50s",
+    bid: "0.05 ETH",
+    currentBid: "0.15 ETH",
+  },
+  {
+    type: "Book",
+    img: nft2,
     name: "Liquid Wave",
     time: "3h 1m 50s",
     bid: "0.05 ETH",

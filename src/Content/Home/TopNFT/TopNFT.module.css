@@ -23,8 +23,10 @@
 }
 
 .nft{
-    padding-right: 1vw;
-
+    padding-right: 1em;
+}
+.nft img{
+    border-radius:23px;
 }
 .text{
     max-width: 100%;

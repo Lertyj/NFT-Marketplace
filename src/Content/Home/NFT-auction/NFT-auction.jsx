@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./NFT-auction.module.css";
 import { nftData } from "./nftData.jsx";
 import ActionButton from "../../Common_Components/Buttons/ActionButton.jsx";
+import RadioButtonsGroup from "./RadioButtonsGroup";
+
+// let n = "All";
+const filterLogic = {
+  Book: (item) => item.type === "Book",
+  ArtWork: (item) => item.type === "ArtWork",
+  All: () => true,
+};
 
 export function AuctionItem({ img, name, bid, currentBid, time }) {
   return (
@@ -30,24 +38,28 @@ export function AuctionItem({ img, name, bid, currentBid, time }) {
   );
 }
 function NFTAuction() {
+  const [selectedOption, setSelectedOption] = useState("All");
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>
         <h3>Trending Bids</h3>
         <div className={styles.select}>
-          <p className={`${styles.active} ${styles.item}`}>All</p>
-          <p className={styles.item}>Artwork</p>
-          <p className={styles.item}>Book</p>
+          <RadioButtonsGroup
+            selectedOption={selectedOption}
+            setSelectedOption={setSelectedOption}
+          />
         </div>
       </div>
       <div className={styles.nft_auction}>
-        {Array(8)
-          .fill()
-          .map((_, index) => (
+        {nftData
+          .filter(filterLogic[selectedOption] || filterLogic.All)
+          .slice(0, 8)
+          .map((item, index) => (
             <AuctionItem
               className={styles.auction_item}
               key={index}
-              {...nftData[index % nftData.length]}
+              {...item}
             />
           ))}
       </div>

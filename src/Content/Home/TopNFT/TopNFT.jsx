@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./TopNFT.module.css";
 import avatar from "../../../icons/avatar.svg";
-import NFT from "../../../icons/nft-second.svg";
+import NFT from "../../../icons/nft-second.jpg";
 import ActionButton from "../../Common_Components/Buttons/ActionButton";
 function TopNFT() {
   return (
