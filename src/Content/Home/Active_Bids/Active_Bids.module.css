@@ -5,9 +5,9 @@
     max-width: 100%;
 }
 .content{
-    margin-top: 1em;
+    margin-top: 2em;
     overflow-x: auto;
-    max-width: 85lvw;
+    max-width: 87lvw;
 }
 .last{
     margin-bottom: 0px;
@@ -15,6 +15,12 @@
 .table_wrapper{
     width: 100%;
 
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 .content::-webkit-scrollbar{
     background:none;
@@ -26,6 +32,9 @@
 .content::-webkit-scrollbar-thumb{
     background-color:#FFFAFA;
     border-radius:13px
+}
+.button{
+    max-width: 144px;
 }
 @media screen and (max-width: 768px){
     .content{

@@ -86,11 +86,12 @@ export function ActiveBid({
   );
 }
 
-function ActiveBids() {
+function ActiveBids({ button }) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>
         <h3>Active Bids</h3>
+        <div className={styles.button}>{button}</div>
       </div>
       <div className={styles.content}>
         <table className={styles.table_wrapper}>

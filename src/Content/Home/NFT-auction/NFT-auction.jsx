@@ -4,7 +4,6 @@ import { nftData } from "./nftData.jsx";
 import ActionButton from "../../Common_Components/Buttons/ActionButton.jsx";
 import RadioButtonsGroup from "./RadioButtonsGroup";
 
-// let n = "All";
 const filterLogic = {
   Book: (item) => item.type === "Book",
   ArtWork: (item) => item.type === "ArtWork",

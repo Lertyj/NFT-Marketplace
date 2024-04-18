@@ -1,0 +1,18 @@
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2em;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+}
+.text{
+    opacity: .5;
+}
+.icon{
+    margin: 0 .2em;
+}

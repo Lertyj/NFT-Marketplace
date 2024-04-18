@@ -47,6 +47,7 @@
     --main-button-background: #6F4FF2;
     --second-button-background: #DC3546;
     --main-button-color:#FFFFFF;
+    --main-scrollbar-background: #FFFAFA;
   }
   
   
@@ -57,6 +58,7 @@
     --main-background:#F2F2F2;
     --second-background: #FFFFFF;
     --main-fill: #66656b;
+    --main-scrollbar-background: #A5A5A5;
   }
   button{
     transition: opacity 0.3s;

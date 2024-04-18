@@ -1,5 +1,5 @@
 .button{
-    padding: 0.8rem;
+    padding: 0.8em 1.4em;
     background: var(--main-button-background);
     width: 100%;
     color: var(--main-button-color);

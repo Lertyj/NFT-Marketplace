@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import SideBar from "../SideBar/SideBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../Content/Home/Home";
+import Bid from "../Content/Bid/Bid";
 
 function App() {
   return (
@@ -15,11 +16,11 @@ function App() {
           <div className={styles.app_wrapper_content}>
             <Routes>
               <Route exact path="/" element={<Home />} />
-              {/* <Route exact path='/bid' element={</>} />
-            <Route exact path='/heart' element={</>} />
-            <Route exact path='/collection' element={</>} />
-            <Route exact path='/profile' element={</>} />
-            <Route exact path='/setting' element={</>} /> */}
+              <Route exact path="/bid" element={<Bid />} />
+              {/* // <Route exact path='/heart' element={</>} />
+            // <Route exact path='/collection' element={</>} />
+            // <Route exact path='/profile' element={</>} />
+            // <Route exact path='/setting' element={</>} /> */}
             </Routes>
           </div>
         </Router>
