@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../Content/Home/Home";
 import Bid from "../Content/Bid/Bid";
 import Saved from "../Content/Saved/Saved";
+import Collection from "../Content/Collection/Collection";
 function App() {
   return (
     <div className={styles.app_container}>
@@ -18,8 +19,8 @@ function App() {
               <Route exact path="/" element={<Home />} />
               <Route exact path="/bid" element={<Bid />} />
               <Route exact path="/heart" element={<Saved />} />
-              {/* // <Route exact path='/collection' element={</>} />
-            // <Route exact path='/profile' element={</>} />
+              <Route exact path="/collection" element={<Collection />} />
+              {/* // <Route exact path='/profile' element={</>} />
             // <Route exact path='/setting' element={</>} /> */}
             </Routes>
           </div>

@@ -48,13 +48,17 @@ export function ItemList({ type, amount }) {
     </div>
   );
 }
-function NFTAuction() {
+function NFTAuction({ title }) {
   const [selectedOption, setSelectedOption] = useState("All");
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>
-        <h3>Trending Bids</h3>
+        {title && title !== "" && (
+          <div className={styles.title}>
+            <h3>{title}</h3>
+          </div>
+        )}
         <div className={styles.select}>
           <RadioButtonsGroup
             selectedOption={selectedOption}

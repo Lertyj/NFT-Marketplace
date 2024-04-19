@@ -15,7 +15,7 @@ function Home() {
         <TopNFT />
       </div>
       <div className={styles.nft_auction}>
-        <NFTAuction />
+        <NFTAuction title="Trending Bids" />
       </div>
       <div className={styles.analytical}>
         <Analytical />
