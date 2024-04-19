@@ -12,6 +12,7 @@
   
   .label.selected {
     background: var(--main-button-background);
+    color: var(--main-button-color);
   }
   
   .input {

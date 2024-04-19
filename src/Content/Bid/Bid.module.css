@@ -10,6 +10,10 @@
 .item{
     min-width: 270px;
 }
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
 @media screen and (max-width: 1280px){
     .item{
         min-width: 300px;

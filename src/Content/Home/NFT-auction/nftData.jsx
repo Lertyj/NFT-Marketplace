@@ -2,6 +2,7 @@ import nft from "../../../icons/nft.jpg";
 import nft2 from "../../../icons/nft-book.jpg";
 export const nftData = [
   {
+    state: "liked",
     type: "ArtWork",
     img: nft,
     name: "Liquid Wave",
@@ -10,6 +11,7 @@ export const nftData = [
     currentBid: "0.15 ETH",
   },
   {
+    state: "liked",
     type: "Book",
     img: nft2,
     name: "Liquid Wave",
@@ -18,6 +20,7 @@ export const nftData = [
     currentBid: "0.15 ETH",
   },
   {
+    state: "liked",
     type: "ArtWork",
     img: nft,
     name: "Liquid Wave",
@@ -26,6 +29,7 @@ export const nftData = [
     currentBid: "0.15 ETH",
   },
   {
+    state: "liked",
     type: "Book",
     img: nft2,
     name: "Liquid Wave",
@@ -34,6 +38,7 @@ export const nftData = [
     currentBid: "0.15 ETH",
   },
   {
+    state: "liked",
     type: "ArtWork",
     img: nft,
     name: "Liquid Wave",
@@ -42,6 +47,7 @@ export const nftData = [
     currentBid: "0.15 ETH",
   },
   {
+    state: "liked",
     type: "Book",
     img: nft2,
     name: "Liquid Wave",
@@ -50,6 +56,7 @@ export const nftData = [
     currentBid: "0.15 ETH",
   },
   {
+    state: "liked",
     type: "ArtWork",
     img: nft,
     name: "Liquid Wave",
@@ -58,6 +65,7 @@ export const nftData = [
     currentBid: "0.15 ETH",
   },
   {
+    state: "liked",
     type: "Book",
     img: nft2,
     name: "Liquid Wave",

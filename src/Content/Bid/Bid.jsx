@@ -7,7 +7,7 @@ import { Card } from "../Home/Analytical/Analytical";
 import { cardData } from "./Data/CardsData";
 function Bid() {
   return (
-    <>
+    <div className={styles.wrapper}>
       <TitleOtherPages page="Bids" welcome="Welcome Bids Page" path="Bids" />
       <div className={styles.cards}>
         {cardData.map((card, index) => (
@@ -17,7 +17,7 @@ function Bid() {
         ))}
       </div>
       <ActiveBids button={<ActionButton text="Place a bid" />} />
-    </>
+    </div>
   );
 }
 

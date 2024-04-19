@@ -36,6 +36,18 @@ export function AuctionItem({ img, name, bid, currentBid, time }) {
     </div>
   );
 }
+export function ItemList({ type, amount }) {
+  return (
+    <div className={styles.nft_auction}>
+      {nftData
+        .filter(filterLogic[type] || filterLogic.All)
+        .slice(0, amount || nftData.length)
+        .map((item, index) => (
+          <AuctionItem className={styles.auction_item} key={index} {...item} />
+        ))}
+    </div>
+  );
+}
 function NFTAuction() {
   const [selectedOption, setSelectedOption] = useState("All");
 
@@ -50,18 +62,7 @@ function NFTAuction() {
           />
         </div>
       </div>
-      <div className={styles.nft_auction}>
-        {nftData
-          .filter(filterLogic[selectedOption] || filterLogic.All)
-          .slice(0, 8)
-          .map((item, index) => (
-            <AuctionItem
-              className={styles.auction_item}
-              key={index}
-              {...item}
-            />
-          ))}
-      </div>
+      <ItemList type={selectedOption} amount="8" />
     </div>
   );
 }
