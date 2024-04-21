@@ -31,6 +31,10 @@
   .menu_item{
     fill:var(--main-menu-fill);
   }
+  img{
+    width: 100%;
+    max-height: 100%;
+}
   /* начальный глобальный параметр */
   
   :root{ 
@@ -48,6 +52,10 @@
     --second-button-background: #DC3546;
     --main-button-color:#FFFFFF;
     --main-scrollbar-background: #FFFAFA;
+    --purple_bg: #6F4FF2;
+    --green_bg: #50BB25;
+    --yellow_bg: #F9D62C;
+    --red_bg: #DC3546;
   }
   
   

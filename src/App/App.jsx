@@ -7,6 +7,7 @@ import Home from "../Content/Home/Home";
 import Bid from "../Content/Bid/Bid";
 import Saved from "../Content/Saved/Saved";
 import Collection from "../Content/Collection/Collection";
+import Profile from "../Content/Profile/Profile";
 function App() {
   return (
     <div className={styles.app_container}>
@@ -20,8 +21,8 @@ function App() {
               <Route exact path="/bid" element={<Bid />} />
               <Route exact path="/heart" element={<Saved />} />
               <Route exact path="/collection" element={<Collection />} />
-              {/* // <Route exact path='/profile' element={</>} />
-            // <Route exact path='/setting' element={</>} /> */}
+              <Route exact path="/profile" element={<Profile />} />
+              {/* // <Route exact path='/setting' element={</>} /> */}
             </Routes>
           </div>
         </Router>

@@ -1,0 +1,40 @@
+.wrapper{
+    width: 23%;
+    background: var(--second-background);
+    border-radius: 18px;
+}
+.container{
+    padding: 1em;
+    
+}
+.avatar{
+    width: 43px;
+    height: 43px;
+    background: #FFFFFF;
+    border-radius:50%;
+    border: solid 2px #FFFFFF;
+    position: absolute;
+    right: 15%;
+    bottom: -5%;
+}
+.img{
+    position: relative;
+}
+.nft{
+    border-radius: 18px
+}
+@media screen and (max-width: 1280px){
+    .wrapper{
+        width: 30%;
+    }
+}
+@media screen and (max-width: 992px){
+    .wrapper{
+        width: 47.5%;
+    }
+}
+@media screen and (max-width: 576px){
+    .wrapper{
+        width: 90%;
+    }
+}

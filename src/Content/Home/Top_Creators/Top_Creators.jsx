@@ -4,18 +4,18 @@ import classes from "./Creator_component.module.css";
 import { creatorsData } from "./Top_CreatorData";
 import ActionButton from "../../Common_Components/Buttons/ActionButton";
 
-export function CreatorComponent({ avatar, nickname, projects }) {
+export function CreatorComponent({ avatar, nickname, projects, follow }) {
   return (
     <div className={classes.wrapper}>
-      <div className={classes.content}>
-        <img src={avatar} alt="avatar" />
-        <div className={classes.information}>
-          <h4>{nickname}</h4>
-          <p>{projects}</p>
+      <div className={classes.container}>
+        <div className={classes.content}>
+          <img src={avatar} alt="avatar" />
+          <div className={classes.information}>
+            <h4>{nickname}</h4>
+            <p>{projects}</p>
+          </div>
         </div>
-      </div>
-      <div className={classes.block_button}>
-        <ActionButton text="Follow" classname="follow" />
+        <ActionButton text={follow} classname={follow} />
       </div>
     </div>
   );

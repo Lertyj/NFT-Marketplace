@@ -1,18 +1,30 @@
 .wrapper{
     display: flex;
     flex-direction: row;
-    padding: 20px;
     background: var(--second-background);
     align-items: center;
     border-radius: 18px;
-    justify-content: space-between;
+    max-width: 100%;
+}
+.container{
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between
+
 }
 .content{
     display: flex;
     flex-direction: row;
 }
+.content img{
+    width: 43px;
+    height: 43px;
+}
 .information{
-    margin-left: 16%;
+    margin-left: 1em;
     display: flex;
     flex-direction: column;
 }

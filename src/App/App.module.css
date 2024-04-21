@@ -24,7 +24,7 @@
 }
 @media screen and (max-width: 1280px){
     .app_wrapper{
-        grid-gap: 40px;
+        grid-gap: 50px;
     }
 }
 @media screen and (max-width: 768px){

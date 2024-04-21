@@ -1,0 +1,84 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.following{
+    display: flex;
+    flex-direction: column;
+    min-width: 58%;
+    flex-wrap: wrap;
+}
+.information{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.following_container{
+    display: flex;
+    flex-direction: row;
+    grid-gap:1em;
+    max-width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1em;
+}
+
+.following_container ul{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+    grid-gap: 1em;
+}
+.item{
+    width: 100%;
+}
+.authentication{
+    max-width: 40%;
+}
+.bought, .collection{
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+.cards{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    flex-wrap: wrap;
+    grid-gap:1em;
+}
+@media screen and (max-width: 1280px){
+    .following{
+        min-width: 100%;
+    }
+    .following_container{
+        justify-content: normal;
+    }
+    .information{
+        grid-gap: 2em;
+    }
+    
+}
+@media screen and (max-width: 768px){
+    .following_container ul{
+        width: 100%;
+    }
+    .following_container{
+        align-items:center
+    }
+}
+@media screen and (max-width: 576px){
+    .cards{
+        justify-content: center;
+    }
+
+}

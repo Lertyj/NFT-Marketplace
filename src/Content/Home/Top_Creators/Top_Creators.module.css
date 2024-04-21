@@ -11,6 +11,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 .content ul{
     margin-top: 1em;
     width: 47%;
@@ -39,6 +40,5 @@
     .content ul{
         width: 100%;
     }
-    
 }
 

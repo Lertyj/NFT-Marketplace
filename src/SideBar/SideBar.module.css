@@ -1,7 +1,4 @@
-img{
-    width: 100%;
-    max-height: 100%;
-}
+
 .sidebar{
     grid-area: n;
     max-width: 80px;
