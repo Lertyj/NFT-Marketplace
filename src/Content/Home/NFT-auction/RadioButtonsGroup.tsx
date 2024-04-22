@@ -1,7 +1,13 @@
 import React from "react";
 import styles from "./RadioButtonsGroup.module.css";
 
-const RadioButton = ({ label, checked, onChange }) => (
+interface RadioButtonProps {
+  label: string;
+  checked: boolean;
+  onChange: () => void;
+}
+
+const RadioButton = ({ label, checked, onChange }:RadioButtonProps) => (
   <label className={`${styles.label} ${checked ? styles.selected : ""}`}>
     <input
       className={styles.input}
@@ -13,8 +19,14 @@ const RadioButton = ({ label, checked, onChange }) => (
   </label>
 );
 
-const RadioButtonsGroup = ({ selectedOption, setSelectedOption }) => {
-  const handleOptionChange = (option) => {
+interface RadioButtonsGroupProps {
+  selectedOption: string;
+  setSelectedOption: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const RadioButtonsGroup = ({ selectedOption, setSelectedOption }:RadioButtonsGroupProps) => {
+
+  const handleOptionChange = (option: string) => {
     setSelectedOption(option);
   };
 

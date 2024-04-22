@@ -33,6 +33,18 @@ export function BidTitle() {
     </tr>
   );
 }
+interface ActiveBidProps{
+  nft:string,
+  nft_name:string,
+  nft_alt:string,
+  nft_owner:string,
+  open_price:string,
+  your_offer:string,
+  avatar:string,
+  avatar_alt:string,
+  recent_offer:string,
+  time:string;
+}
 export function ActiveBid({
   nft,
   nft_name,
@@ -44,7 +56,7 @@ export function ActiveBid({
   avatar_alt,
   recent_offer,
   time,
-}) {
+}:ActiveBidProps) {
   return (
     <tr className={`${classes.wrapper} ${classes.item}`}>
       <td className={classes.checkbox}>
@@ -86,7 +98,10 @@ export function ActiveBid({
   );
 }
 
-function ActiveBids({ button }) {
+interface ActiveBidsProps{
+  button?: any;
+}
+function ActiveBids({ button }: ActiveBidsProps) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>
@@ -97,7 +112,7 @@ function ActiveBids({ button }) {
         <table className={styles.table_wrapper}>
           <tbody>
             <BidTitle />
-            {bidsData.map((bid, index) => (
+            {bidsData.map((bid:any, index:number) => (
               <ActiveBid key={index} {...bid} />
             ))}
           </tbody>

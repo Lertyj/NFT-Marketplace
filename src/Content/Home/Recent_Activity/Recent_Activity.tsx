@@ -2,7 +2,14 @@ import React from "react";
 import styles from "./Recent_Activity.module.css";
 import classes from "./ActivityBlock.module.css";
 import { recentData } from "./Recent_ActivityData";
-function Activity({ avatar, nickname, event, time }) {
+
+interface ActivityProps{
+  avatar:string,
+  nickname:string,
+  event:string,
+  time:string;
+}
+function Activity({ avatar, nickname, event, time }:ActivityProps) {
   return (
     <div className={classes.wrapper}>
       <div className={classes.content}>
@@ -29,7 +36,7 @@ function RecentActivity() {
       <div className={styles.block}>
         <div className={styles.content}>
           <ul>
-            {recentData.map((recent, index) => (
+            {recentData.map((recent:any, index:number) => (
               <li className={styles.item} key={index}>
                 <Activity key={index} {...recent} />
               </li>

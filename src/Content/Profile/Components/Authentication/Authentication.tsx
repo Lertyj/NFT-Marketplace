@@ -3,7 +3,11 @@ import styles from "./Authentication.module.css";
 import mark from "../../../../icons/mark.svg";
 import lock from "../../../../icons/lock.svg";
 
-export function Authentication({ name, avatar }) {
+interface AuthenticationProps{
+  name:string;
+  avatar:string;
+}
+export function Authentication({ name, avatar }:AuthenticationProps) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>

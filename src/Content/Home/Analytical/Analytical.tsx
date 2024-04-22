@@ -1,10 +1,23 @@
 import React from "react";
 import styles from "./Analytical.module.css";
 import classes from "./Card.module.css";
-import { CircleChart } from "./CircleChart";
-import { GraphicChart } from "./Chart";
+// @ts-ignore
+import GraphicChart from "./Chart.jsx";
+
+// @ts-ignore
+import CircleChart from "./CircleChart.jsx";
+
 import "./chart.css";
 import { cardData } from "./CardData";
+
+interface CardProps{
+  img: string,
+  number: string,
+  industry: string,
+  percent?: string,
+  classnameimg?:string,
+  classnamep?:string;
+}
 export function Card({
   img,
   number,
@@ -12,12 +25,12 @@ export function Card({
   percent,
   classnameimg,
   classnamep,
-}) {
+}: CardProps) {
   return (
     <div className={classes.card}>
       <div className={classes.content}>
         <div className={classes.information}>
-          <div className={`${classes.img} ${classes[classnameimg]}`}>
+          <div className={`${classes.img} ${classnameimg ? classes[classnameimg] : ''}`}>
             <img src={img} alt={industry} />
           </div>
           <div className={classes.text}>
@@ -25,13 +38,14 @@ export function Card({
             <p>{industry}</p>
           </div>
         </div>
-        <div className={`${classes.percent} ${classes[classnamep]}`}>
+        <div className={`${classes.percent} ${classnamep ? classes[classnamep] : ''}`}>
           <p>{percent}</p>
         </div>
       </div>
     </div>
   );
 }
+
 
 function Analytical() {
   return (

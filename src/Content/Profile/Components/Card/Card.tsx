@@ -1,6 +1,11 @@
 import React from "react";
 import styles from "./Card.module.css";
-export function Card({ img, name, avatar }) {
+interface CardProps{
+  img: string,
+  name: string,
+  avatar: string;
+}
+export function Card({ img, name, avatar }:CardProps) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>

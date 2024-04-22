@@ -43,7 +43,7 @@ function Collection() {
         <h3> My bought</h3>
         <div className={styles.cards}>
           {cardData.slice(0, 4).map((item, index) => (
-            <Card className={styles.auction_item} key={index} {...item} />
+            <Card key={index} {...item} />
           ))}
         </div>
       </div>
@@ -51,7 +51,7 @@ function Collection() {
         <h3> My Collections</h3>
         <div className={styles.cards}>
           {cardData.slice(0, 4).map((item, index) => (
-            <Card className={styles.auction_item} key={index} {...item} />
+            <Card key={index} {...item} />
           ))}
         </div>
       </div>

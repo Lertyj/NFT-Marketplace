@@ -2,8 +2,8 @@ import nft from "../../../icons/nft.jpg";
 import nft2 from "../../../icons/nft-book.jpg";
 export const nftData = [
   {
-    state: "liked",
-    type: "ArtWork",
+    statecard: "liked",
+    value: "ArtWork",
     img: nft,
     name: "Liquid Wave",
     time: "3h 1m 50s",
@@ -11,8 +11,8 @@ export const nftData = [
     currentBid: "0.15 ETH",
   },
   {
-    state: "liked",
-    type: "Book",
+    statecard: "liked",
+    value: "Book",
     img: nft2,
     name: "Liquid Wave",
     time: "3h 1m 50s",
@@ -20,8 +20,8 @@ export const nftData = [
     currentBid: "0.15 ETH",
   },
   {
-    state: "liked",
-    type: "ArtWork",
+    statecard: "liked",
+    value: "ArtWork",
     img: nft,
     name: "Liquid Wave",
     time: "3h 1m 50s",
@@ -29,8 +29,8 @@ export const nftData = [
     currentBid: "0.15 ETH",
   },
   {
-    state: "liked",
-    type: "Book",
+    statecard: "liked",
+    value: "Book",
     img: nft2,
     name: "Liquid Wave",
     time: "3h 1m 50s",
@@ -38,8 +38,8 @@ export const nftData = [
     currentBid: "0.15 ETH",
   },
   {
-    state: "liked",
-    type: "ArtWork",
+    statecard: "liked",
+    value: "ArtWork",
     img: nft,
     name: "Liquid Wave",
     time: "3h 1m 50s",
@@ -47,8 +47,8 @@ export const nftData = [
     currentBid: "0.15 ETH",
   },
   {
-    state: "liked",
-    type: "Book",
+    statecard: "liked",
+    value: "Book",
     img: nft2,
     name: "Liquid Wave",
     time: "3h 1m 50s",
@@ -56,8 +56,8 @@ export const nftData = [
     currentBid: "0.15 ETH",
   },
   {
-    state: "liked",
-    type: "ArtWork",
+    statecard: "liked",
+    value: "ArtWork",
     img: nft,
     name: "Liquid Wave",
     time: "3h 1m 50s",
@@ -65,8 +65,8 @@ export const nftData = [
     currentBid: "0.15 ETH",
   },
   {
-    state: "liked",
-    type: "Book",
+    statecard: "liked",
+    value: "Book",
     img: nft2,
     name: "Liquid Wave",
     time: "3h 1m 50s",

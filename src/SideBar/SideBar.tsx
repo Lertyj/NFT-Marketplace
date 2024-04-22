@@ -14,7 +14,7 @@ import styles from "./SideBar.module.css";
 function SideBar() {
   const [, setActivePage] = useState("");
 
-  const handlePageChange = (page) => {
+  const handlePageChange = (page:string) => {
     setActivePage(page);
     localStorage.setItem("activePage", page);
   };

@@ -5,7 +5,15 @@ import avatar from "../../../../icons/undefined-user.svg";
 import inputData from "./inputData";
 import ActionButton from "../../../Common_Components/Buttons/ActionButton";
 
-function Input({ value, type }) {
+interface InputProps{
+  value:string,
+  type:string;
+}
+interface WelcomeProps{
+  name:string,
+  img:string;
+}
+function Input({ value, type }: InputProps) {
   return (
     <div className={classes.wrapper}>
       <h5>{value}</h5>
@@ -14,7 +22,7 @@ function Input({ value, type }) {
   );
 }
 
-function Welcome({ name, img }) {
+function Welcome({ name, img }: WelcomeProps) {
   return (
     <div className={classes.container}>
       <span className={classes.img}>
@@ -59,10 +67,9 @@ function ProfileSetting() {
             <div className={styles.columns}>
               <div className={styles.column}>
                 {Array(3)
-                  .fill()
+                  .fill(0)
                   .map((_, index) => (
                     <Input
-                      in
                       key={index}
                       {...inputData[index % inputData.length]}
                     />
@@ -70,10 +77,9 @@ function ProfileSetting() {
               </div>
               <div className={styles.column}>
                 {Array(3)
-                  .fill()
+                  .fill(0)
                   .map((_, index) => (
                     <Input
-                      in
                       key={index}
                       {...inputData[index % inputData.length]}
                     />

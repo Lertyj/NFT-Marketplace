@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import * as d3 from "d3";
-export function GraphicChart() {
+function GraphicChart() {
   useEffect(() => {
     var width = 470;
     var height = 280;
@@ -121,3 +121,4 @@ export function GraphicChart() {
   return <div className="gpraphic_chart"></div>;
 }
 // Добавьте класс "last-point" к последней точке вашего графика
+export default GraphicChart;

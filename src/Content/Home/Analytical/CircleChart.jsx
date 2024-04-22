@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import * as d3 from "d3";
-export function CircleChart() {
+function CircleChart() {
   useEffect(() => {
     var width = 260;
     var height = 260;
@@ -58,3 +58,4 @@ export function CircleChart() {
 
   return <div className="chart"></div>;
 }
+export default CircleChart;

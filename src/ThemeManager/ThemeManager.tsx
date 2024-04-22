@@ -3,8 +3,9 @@ import { ReactComponent as DarkModeImage } from "../icons/darkmode.svg";
 import { ReactComponent as LightModeImage } from "../icons/lightmode.svg";
 import { ReactComponent as MoonSunImage } from "../icons/lightdarkmode.svg";
 import styles from "./ThemeManager.module.css";
+
 const ThemeManager = () => {
-  const themes = {
+  const themes: Record<string, JSX.Element> = {
     dark: <DarkModeImage className={styles.theme_svg} />,
     light: <LightModeImage className={styles.theme_svg} />,
     lightdark: <MoonSunImage className={styles.theme_svg} />,
@@ -17,10 +18,13 @@ const ThemeManager = () => {
 
   useEffect(() => {
     localStorage.setItem("selectedTheme", selectedTheme);
-    document.querySelector(".app").setAttribute("data-theme", selectedTheme);
+    const appElement = document.querySelector(".app");
+    if (appElement) {
+      appElement.setAttribute("data-theme", selectedTheme);
+    }
   }, [selectedTheme]);
 
-  const changeTheme = (theme) => {
+  const changeTheme = (theme: string) => {
     setSelectedTheme(theme);
     setShowThemes(false);
   };
@@ -46,4 +50,5 @@ const ThemeManager = () => {
     </div>
   );
 };
+
 export default ThemeManager;

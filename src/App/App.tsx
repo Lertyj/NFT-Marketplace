@@ -9,21 +9,22 @@ import Saved from "../Content/Saved/Saved";
 import Collection from "../Content/Collection/Collection";
 import Profile from "../Content/Profile/Profile";
 import Setting from "../Content/Setting/Setting";
+
 function App() {
   return (
-    <div className={`${styles.app_container} ${"app"}`}>
+    <div className={`${styles.app_container} app`}>
       <div className={styles.app_wrapper}>
         <Router>
           <Header />
           <SideBar />
           <div className={styles.app_wrapper_content}>
             <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route exact path="/bid" element={<Bid />} />
-              <Route exact path="/heart" element={<Saved />} />
-              <Route exact path="/collection" element={<Collection />} />
-              <Route exact path="/profile" element={<Profile />} />
-              <Route exact path="/setting" element={<Setting />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/bid" element={<Bid />} />
+              <Route path="/heart" element={<Saved />} />
+              <Route path="/collection" element={<Collection />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/setting" element={<Setting />} />
             </Routes>
           </div>
         </Router>

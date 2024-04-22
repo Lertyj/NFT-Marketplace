@@ -4,7 +4,13 @@ import classes from "./Creator_component.module.css";
 import { creatorsData } from "./Top_CreatorData";
 import ActionButton from "../../Common_Components/Buttons/ActionButton";
 
-export function CreatorComponent({ avatar, nickname, projects, follow }) {
+interface CreatorComponentProps{
+  avatar:string,
+  nickname:string,
+  projects:string,
+  follow:string;
+}
+export function CreatorComponent({ avatar, nickname, projects, follow }:CreatorComponentProps) {
   return (
     <div className={classes.wrapper}>
       <div className={classes.container}>

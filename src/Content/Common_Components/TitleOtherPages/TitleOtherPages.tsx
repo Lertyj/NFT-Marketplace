@@ -1,7 +1,13 @@
 import React from "react";
 import styles from "./TitleOtherPages.module.css";
 
-export function TitleOtherPages({ page, welcome, path }) {
+interface TitleOtherPagesProps {
+  page: string;
+  welcome: string;
+  path: string;
+}
+
+export function TitleOtherPages({ page, welcome, path }: TitleOtherPagesProps) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>

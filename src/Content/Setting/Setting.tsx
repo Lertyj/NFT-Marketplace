@@ -9,7 +9,10 @@ import PaymentMethodSetting from "./Tabs/PaymentMethodSetting/PaymentMethodSetti
 import APISetting from "./Tabs/APISetting/APISetting";
 
 function Setting() {
-  const tabs = {
+  interface Tabs {
+    [key: string]: JSX.Element;
+  }
+  const tabs:Tabs = {
     Profile: <ProfileSetting />,
     Application: <ApplicationSetting />,
     Security: <SecuritySetting />,
@@ -22,7 +25,7 @@ function Setting() {
     return localStorage.getItem("activeTab") || "Profile";
   });
 
-  const handleTabClick = (tab) => {
+  const handleTabClick = (tab:string) => {
     setActiveTab(tab);
   };
 
