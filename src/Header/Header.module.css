@@ -16,6 +16,17 @@ button{
     align-items: center;
     height: auto;
 }
+.logo{
+    display: none;
+    width: 30px;
+    height: 30px;
+}
+.search_logo{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    grid-gap:0.7em;
+}
 .search{
     background:var(--second-background);
     display: flex;
@@ -24,11 +35,11 @@ button{
 .button{
     display: flex;
     flex-direction: column-reverse;
-    padding: 0 .8rem;
+    padding: 0 .8em;
 }
 .form{
     display: flex;
-    padding: .4rem 2rem .4rem 0;
+    padding: .4em 2em .4em 0;
 }
 .input{
     background:none;
@@ -40,11 +51,27 @@ button{
     align-items: center;
 }
 .bell{
-    margin: 0 1.5vw;
+    margin: 0 1em;
 }
 input:focus, textarea:focus, select:focus {
     outline: none;
 }
 .ProfileImage{
     opacity: 0.9;
+}
+
+
+
+@media screen and (max-width: 768px){
+    .logo{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+}
+@media screen and (max-width: 576px){
+    .form{
+            display: flex;
+            padding: 0.4em 0 0.4em 0;
+    }
 }

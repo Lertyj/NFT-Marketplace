@@ -11,7 +11,7 @@ import Profile from "../Content/Profile/Profile";
 import Setting from "../Content/Setting/Setting";
 function App() {
   return (
-    <div className={styles.app_container}>
+    <div className={`${styles.app_container} ${"app"}`}>
       <div className={styles.app_wrapper}>
         <Router>
           <Header />

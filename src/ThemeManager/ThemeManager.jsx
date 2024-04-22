@@ -17,9 +17,7 @@ const ThemeManager = () => {
 
   useEffect(() => {
     localStorage.setItem("selectedTheme", selectedTheme);
-    document
-      .querySelector(".App_app_container__V-0Go")
-      .setAttribute("data-theme", selectedTheme);
+    document.querySelector(".app").setAttribute("data-theme", selectedTheme);
   }, [selectedTheme]);
 
   const changeTheme = (theme) => {
