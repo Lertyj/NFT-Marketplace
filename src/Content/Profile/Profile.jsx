@@ -5,7 +5,7 @@ import { followingData } from "./FollowingData";
 import { CreatorComponent } from "../Home/Top_Creators/Top_Creators";
 import avatar from "../../icons/avatar.svg";
 import { Authentication } from "./Components/Authentication/Authentication";
-import { cardData } from "./Components/Card/cardData";
+import { cardData } from "./Components/Card/CardData";
 import { Card } from "./Components/Card/Card";
 function Collection() {
   return (

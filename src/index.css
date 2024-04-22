@@ -56,6 +56,8 @@
     --green_bg: #50BB25;
     --yellow_bg: #F9D62C;
     --red_bg: #DC3546;
+    --input_bg: #131129;
+    --border-fill:none;
   }
   
   
@@ -67,6 +69,8 @@
     --second-background: #FFFFFF;
     --main-fill: #66656b;
     --main-scrollbar-background: #A5A5A5;
+    --input_bg: #FFFFFF;
+    --border-fill: #65646A;
   }
   button{
     transition: opacity 0.3s;

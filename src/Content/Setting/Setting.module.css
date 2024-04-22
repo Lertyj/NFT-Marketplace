@@ -1,0 +1,18 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+.menu{
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-gap:1em;
+}
+.inactive{
+    color:var(--main-color)
+}
+.active{
+    color: var(--active-menu-fill)
+}

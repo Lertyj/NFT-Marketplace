@@ -1,0 +1,70 @@
+.user_setting{
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: space-between;
+    grid-gap:1em;
+}
+.user_profile_wrapper, .update_profile_wrapper{
+    width: 48%;
+}
+.title{
+    padding-bottom: .5em;
+}
+.user_profile, .update_profile, .personal_information{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background:var(--second-background);
+    border: solid 1px var(--second-background);
+    border-radius: 12px;
+}
+.personal_information_wrapper{
+    width: 100%;
+}
+.personal_information_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width:100%;
+}
+.columns{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    grid-gap: 2em;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+}
+.user_profile_container, .update_profile_container, .personal_information_container{
+    padding: 1em;
+}
+.blocks{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2em;
+}
+.button{
+    max-width: 91px;
+}
+@media screen and (max-width: 992px){
+    .user_setting{
+        flex-direction: column;
+    }
+    .user_profile_wrapper, .update_profile_wrapper{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 992px){
+    .columns{
+        flex-direction: column;
+        grid-gap:0;
+    }
+    .column{
+        width: 100%;
+    }
+}

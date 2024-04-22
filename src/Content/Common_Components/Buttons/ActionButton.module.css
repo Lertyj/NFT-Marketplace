@@ -5,6 +5,9 @@
     color: var(--main-button-color);
     border-radius: 9px;
 }
+.save{
+    padding: 0.6em 2em;
+}
 .twice_purple, .twice_red{
     width: 45%;
 }

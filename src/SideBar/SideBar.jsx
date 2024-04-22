@@ -55,7 +55,7 @@ function SideBar() {
               to="/heart"
               onClick={() => handlePageChange("heart")}
             >
-              <button className={styles.iconnn}>
+              <button>
                 <Heart className="menu_item" />
               </button>
             </NavLink>
