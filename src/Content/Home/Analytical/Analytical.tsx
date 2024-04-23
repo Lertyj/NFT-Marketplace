@@ -1,11 +1,8 @@
 import React from "react";
 import styles from "./Analytical.module.css";
 import classes from "./Card.module.css";
-// @ts-ignore
-import GraphicChart from "./Chart.jsx";
-
-// @ts-ignore
-import CircleChart from "./CircleChart.jsx";
+import GraphicChart from "./Chart";
+import CircleChart from "./CircleChart";
 
 import "./chart.css";
 import { cardData } from "./CardData";
@@ -64,7 +61,7 @@ function Analytical() {
         <div className={styles.price}>
           <h2 className={styles.title}>ETH Price</h2>
           <div className={styles.price_content}>
-            <GraphicChart />
+            <GraphicChart/>
           </div>
         </div>
         <div className={styles.statistics}>

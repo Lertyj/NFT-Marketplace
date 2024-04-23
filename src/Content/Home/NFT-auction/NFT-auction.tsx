@@ -13,10 +13,6 @@ interface Item {
   time: string;
 }
 
-type FilterLogic = {
-  [key: string]: (item: Item) => boolean;
-};
-
 const filterLogic: { [key: string]: (item: Item) => boolean } = {
   Book: (item) => item.value === "Book",
   ArtWork: (item) => item.value === "ArtWork",

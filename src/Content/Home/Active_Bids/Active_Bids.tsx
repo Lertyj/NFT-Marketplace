@@ -36,24 +36,20 @@ export function BidTitle() {
 interface ActiveBidProps{
   nft:string,
   nft_name:string,
-  nft_alt:string,
   nft_owner:string,
   open_price:string,
   your_offer:string,
   avatar:string,
-  avatar_alt:string,
   recent_offer:string,
   time:string;
 }
 export function ActiveBid({
   nft,
   nft_name,
-  nft_alt,
   nft_owner,
   open_price,
   your_offer,
   avatar,
-  avatar_alt,
   recent_offer,
   time,
 }:ActiveBidProps) {
@@ -68,7 +64,7 @@ export function ActiveBid({
         </button>
       </td>
       <td className={classes.item_bid}>
-        <img src={nft} alt={nft_alt} />
+        <img src={nft} alt="nft" />
         <div className={classes.item_information}>
           <h4>{nft_name}</h4>
           <p>{nft_owner}</p>
@@ -81,7 +77,7 @@ export function ActiveBid({
         <p>{your_offer}</p>
       </td>
       <td className={classes.recent_offer}>
-        <img src={avatar} alt={avatar_alt} />
+        <img src={avatar} alt="avatar"/>
         <div className={classes.recent_information}>
           <p>{recent_offer}</p>
         </div>
@@ -99,7 +95,17 @@ export function ActiveBid({
 }
 
 interface ActiveBidsProps{
-  button?: any;
+  button?: React.ReactNode;
+}
+interface BidProps{
+  nft: string,
+  nft_name: string,
+  nft_owner: string,
+  open_price: string,
+  your_offer: string,
+  avatar: string,
+  recent_offer: string,
+  time: string,
 }
 function ActiveBids({ button }: ActiveBidsProps) {
   return (
@@ -112,7 +118,7 @@ function ActiveBids({ button }: ActiveBidsProps) {
         <table className={styles.table_wrapper}>
           <tbody>
             <BidTitle />
-            {bidsData.map((bid:any, index:number) => (
+            {bidsData.map((bid:BidProps, index:number) => (
               <ActiveBid key={index} {...bid} />
             ))}
           </tbody>

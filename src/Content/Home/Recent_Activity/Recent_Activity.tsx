@@ -36,7 +36,7 @@ function RecentActivity() {
       <div className={styles.block}>
         <div className={styles.content}>
           <ul>
-            {recentData.map((recent:any, index:number) => (
+            {recentData.map((recent, index:number) => (
               <li className={styles.item} key={index}>
                 <Activity key={index} {...recent} />
               </li>
