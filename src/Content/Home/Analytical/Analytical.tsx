@@ -35,7 +35,7 @@ export function Card({
             <p>{industry}</p>
           </div>
         </div>
-        <div className={`${classes.percent} ${classnamep ? classes[classnamep] : ''}`}>
+        <div className={`${classnamep ? classes[classnamep] : ''}`}>
           <p>{percent}</p>
         </div>
       </div>
