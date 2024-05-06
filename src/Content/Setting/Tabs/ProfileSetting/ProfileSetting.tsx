@@ -16,8 +16,8 @@ interface WelcomeProps{
 function Input({ value, type }: InputProps) {
   return (
     <div className={classes.wrapper}>
-      <h5>{value}</h5>
-      <input type={type} className={classes.input}></input>
+      <label>{value}<input type={type} className={classes.input}></input></label>
+      
     </div>
   );
 }
