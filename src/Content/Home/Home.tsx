@@ -4,9 +4,9 @@ import TopNFT from "./TopNFT/TopNFT";
 import styles from "./Home.module.css";
 import Analytical from "./Analytical/Analytical";
 import RecentActivity from "./Recent_Activity/Recent_Activity";
-import TopCreators from "./Top_Creators/Top_Creators";
-import ActiveBids from "./Active_Bids/Active_Bids";
-import NFTAuction from "./NFT-auction/NFT-auction";
+import TopCreators from "./Top_Creators/TopCreators";
+import ActiveBids from "./Active_Bids/ActiveBids";
+import NFTAuction from "./NFT-auction/NFTAuction";
 function Home() {
   return (
     <>

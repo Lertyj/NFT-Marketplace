@@ -1,31 +1,7 @@
 import React from "react";
 import styles from "./Top_Creators.module.css";
-import classes from "./Creator_component.module.css";
 import { creatorsData } from "./Top_CreatorData";
-import ActionButton from "../../Common_Components/Buttons/ActionButton";
-
-interface CreatorComponentProps{
-  avatar:string,
-  nickname:string,
-  projects:string,
-  follow:string;
-}
-export function CreatorComponent({ avatar, nickname, projects, follow }:CreatorComponentProps) {
-  return (
-    <div className={classes.wrapper}>
-      <div className={classes.container}>
-        <div className={classes.content}>
-          <img src={avatar} alt="avatar" />
-          <div className={classes.information}>
-            <h4>{nickname}</h4>
-            <p>{projects}</p>
-          </div>
-        </div>
-        <ActionButton text={follow} classname={follow} />
-      </div>
-    </div>
-  );
-}
+import { CreatorComponent } from "./CreatorComponent";
 
 function TopCreators() {
   return (

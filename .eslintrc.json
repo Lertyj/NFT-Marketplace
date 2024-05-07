@@ -14,7 +14,7 @@
         }
     },
     "rules": {
-        "indent": ["error", 2], // Указываем желаемый отступ (2 пробела в данном случае)
+        "indent": ["error", 2],
         "react/prop-types": "off"
     },
     "env": {

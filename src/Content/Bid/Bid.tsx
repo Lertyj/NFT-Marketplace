@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Bid.module.css";
-import ActiveBids from "../Home/Active_Bids/Active_Bids";
+import ActiveBids from "../Home/Active_Bids/ActiveBids";
 import ActionButton from "../Common_Components/Buttons/ActionButton";
 import { TitleOtherPages } from "../Common_Components/TitleOtherPages/TitleOtherPages";
-import { Card } from "../Home/Analytical/Analytical";
+import { Card } from "../Home/Analytical/Card";
 import { cardData } from "./Data/CardsData";
 function Bid() {
   return (

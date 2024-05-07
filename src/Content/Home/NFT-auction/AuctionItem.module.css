@@ -1,18 +1,3 @@
-.wrapper{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-.title{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.select{
-    display: flex;
-    flex-direction: row;
-    align-items: center
-}
 .active{
     background: #6F4FF2;
     border-radius: 14px;

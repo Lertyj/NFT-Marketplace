@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Collection.module.css";
 import { TitleOtherPages } from "../Common_Components/TitleOtherPages/TitleOtherPages";
-import NFTAuction from "../Home/NFT-auction/NFT-auction";
+import NFTAuction from "../Home/NFT-auction/NFTAuction";
 function Collection() {
   return (
     <div className={styles.wrapper}>

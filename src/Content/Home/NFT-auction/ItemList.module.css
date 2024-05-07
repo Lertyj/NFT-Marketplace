@@ -1,0 +1,16 @@
+.nft_auction{
+    display: flex;
+    margin-top: 1em;
+    flex-wrap: wrap;
+    grid-gap:4%;
+}
+@media screen and (max-width: 1280px){
+    .nft_auction{
+        grid-gap:5%;
+    }
+}
+@media screen and (max-width: 576px){
+    .nft_auction{
+        justify-content: center;
+    }
+}

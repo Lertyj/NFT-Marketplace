@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Profile.module.css";
 import { TitleOtherPages } from "../Common_Components/TitleOtherPages/TitleOtherPages";
 import { followingData } from "./FollowingData";
-import { CreatorComponent } from "../Home/Top_Creators/Top_Creators";
+import { CreatorComponent } from "../Home/Top_Creators/CreatorComponent";
 import avatar from "../../icons/avatar.svg";
 import { Authentication } from "./Components/Authentication/Authentication";
 import { cardData } from "./Components/Card/CardData";
