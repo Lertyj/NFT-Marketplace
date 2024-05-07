@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./TitleOtherPages.module.css";
+import { NavLink } from "react-router-dom";
 
 interface TitleOtherPagesProps {
   page: string;
@@ -16,7 +17,13 @@ export function TitleOtherPages({ page, welcome, path }: TitleOtherPagesProps) {
       </div>
       <div className={styles.path}>
         <p>
-          <span className={styles.text}>Home</span>{" "}
+          <NavLink
+            to="/"
+          >
+            <button className={styles.button}>
+              <span className={styles.text}>Home</span>{" "}
+            </button>
+          </NavLink>
           <span className={styles.icon}>&gt;</span>{" "}
           <span className={styles.text}>{path}</span>
         </p>

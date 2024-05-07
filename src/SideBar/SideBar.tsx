@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 
 import { ReactComponent as DashBoard } from "../icons/dashboard.svg";
@@ -11,12 +11,8 @@ import { ReactComponent as SignOut } from "../icons/signout.svg";
 import Logo from "../icons/logo.svg";
 import styles from "./SideBar.module.css";
 
-function SideBar() {
-  const [, setActivePage] = useState("");
 
-  const handlePageChange = (page:string) => {
-    setActivePage(page);
-  };
+function SideBar() {
   return (
     <div className={styles.sidebar}>
       <div className={styles.sidebar_wrapper}>
@@ -28,7 +24,6 @@ function SideBar() {
             <NavLink
               className={styles.item}
               to="/"
-              onClick={() => handlePageChange("")}
             >
               <button>
                 <DashBoard className="menu_item" />
@@ -37,7 +32,6 @@ function SideBar() {
             <NavLink
               className={styles.item}
               to="/bid"
-              onClick={() => handlePageChange("bid")}
             >
               <button>
                 <Bid className="menu_item" />
@@ -46,7 +40,6 @@ function SideBar() {
             <NavLink
               className={styles.item}
               to="/heart"
-              onClick={() => handlePageChange("heart")}
             >
               <button>
                 <Heart className="menu_item" />
@@ -55,7 +48,6 @@ function SideBar() {
             <NavLink
               className={styles.item}
               to="/collection"
-              onClick={() => handlePageChange("collection")}
             >
               <button>
                 <Collection className="menu_item" />
@@ -64,7 +56,6 @@ function SideBar() {
             <NavLink
               className={styles.item}
               to="/profile"
-              onClick={() => handlePageChange("profile")}
             >
               <button>
                 <Profile className="menu_item" />
@@ -73,7 +64,6 @@ function SideBar() {
             <NavLink
               className={styles.item}
               to="/setting"
-              onClick={() => handlePageChange("setting")}
             >
               <button>
                 <Setting className="menu_item" />

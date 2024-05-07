@@ -23,3 +23,21 @@
     height: 27px;
     color:var(--main-fill);
 }
+.button{
+    opacity: 1;
+    position: relative;
+}
+.button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--third-color);
+    transition: width 0.3s ease;
+  }
+  
+  .button:hover::after {
+    width: 100%;
+  }
