@@ -10,9 +10,9 @@
     flex-wrap: wrap;
     grid-gap:1em;
 }
-.inactive{
+.item button{
     color:var(--main-color)
 }
-.active{
+:global .active button{
     color: var(--active-menu-fill)
 }

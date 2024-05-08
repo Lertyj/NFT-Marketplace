@@ -9,6 +9,12 @@ import Saved from "../Content/Saved/Saved";
 import Collection from "../Content/Collection/Collection";
 import Profile from "../Content/Profile/Profile";
 import Setting from "../Content/Setting/Setting";
+import ProfileSetting from "../Content/Setting/Tabs/ProfileSetting/ProfileSetting";
+import ApplicationSetting from "../Content/Setting/Tabs/ApplicationSetting/ApplicationSetting";
+import APISetting from "../Content/Setting/Tabs/APISetting/APISetting";
+import PaymentMethodSetting from "../Content/Setting/Tabs/PaymentMethodSetting/PaymentMethodSetting";
+import ActivitySetting from "../Content/Setting/Tabs/ActivitySetting/ActivitySetting";
+import SecuritySetting from "../Content/Setting/Tabs/SecuritySetting/SecuritySetting";
 
 function App() {
   return (
@@ -24,7 +30,14 @@ function App() {
               <Route path="/heart" element={<Saved />} />
               <Route path="/collection" element={<Collection />} />
               <Route path="/profile" element={<Profile />} />
-              <Route path="/setting" element={<Setting />} />
+              <Route path="/setting" element={<Setting />}>
+                <Route path="/setting/profile" element={<ProfileSetting />}/>
+                <Route path="/setting/application" element={<ApplicationSetting />}/>
+                <Route path="/setting/security" element={<SecuritySetting />}/>
+                <Route path="/setting/activity" element={<ActivitySetting />}/>
+                <Route path="/setting/payment" element={<PaymentMethodSetting />}/>
+                <Route path="/setting/api" element={<APISetting />}/>
+              </Route>
             </Routes>
           </div>
         </Router>

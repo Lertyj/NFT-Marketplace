@@ -1,38 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "./Setting.module.css";
 import { TitleOtherPages } from "../Common_Components/TitleOtherPages/TitleOtherPages";
-import ProfileSetting from "./Tabs/ProfileSetting/ProfileSetting";
-import ApplicationSetting from "./Tabs/ApplicationSetting/ApplicationSetting";
-import SecuritySetting from "./Tabs/SecuritySetting/SecuritySetting";
-import ActivitySetting from "./Tabs/ActivitySetting/ActivitySetting";
-import PaymentMethodSetting from "./Tabs/PaymentMethodSetting/PaymentMethodSetting";
-import APISetting from "./Tabs/APISetting/APISetting";
-
+import { NavLink, Outlet } from "react-router-dom";
 function Setting() {
-  interface Tabs {
-    [key: string]: JSX.Element;
-  }
-  const tabs:Tabs = {
-    Profile: <ProfileSetting />,
-    Application: <ApplicationSetting />,
-    Security: <SecuritySetting />,
-    Activity: <ActivitySetting />,
-    "Payment Method": <PaymentMethodSetting />,
-    API: <APISetting />,
-  };
-
-  const [activeTab, setActiveTab] = useState(() => {
-    return localStorage.getItem("activeTab") || "Profile";
-  });
-
-  const handleTabClick = (tab:string) => {
-    setActiveTab(tab);
-  };
-
-  useEffect(() => {
-    localStorage.setItem("activeTab", activeTab);
-  }, [activeTab]);
-
   return (
     <div className={styles.wrapper}>
       <TitleOtherPages
@@ -41,17 +11,40 @@ function Setting() {
         path="Setting"
       />
       <div className={styles.menu}>
-        {Object.keys(tabs).map((tab) => (
-          <button
-            key={tab}
-            onClick={() => handleTabClick(tab)}
-            className={activeTab === tab ? styles.active : styles.inactive}
-          >
-            {tab}
+        <NavLink className={styles.item} to="./profile">
+          <button>
+            <p>Profile</p>
           </button>
-        ))}
+        </NavLink>
+        <NavLink className={styles.item} to="./application">
+          <button>
+            <p>Application</p>
+          </button>
+        </NavLink>
+        <NavLink className={styles.item} to="./security">
+          <button>
+            <p>Security</p>
+          </button>
+        </NavLink>
+        <NavLink className={styles.item} to="./activity">
+          <button>
+            <p>Activity</p>
+          </button>
+        </NavLink>
+        <NavLink className={styles.item} to="./payment">
+          <button>
+            <p>Payment Method</p>
+          </button>
+        </NavLink>
+        <NavLink className={styles.item} to="./api">
+          <button>
+            <p>API</p>
+          </button>
+        </NavLink>
       </div>
-      {tabs[activeTab]}
+      <div className={styles.page}>
+        <Outlet/>
+      </div>
     </div>
   );
 }

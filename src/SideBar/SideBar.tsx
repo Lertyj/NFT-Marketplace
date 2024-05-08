@@ -63,7 +63,7 @@ function SideBar() {
             </NavLink>
             <NavLink
               className={styles.item}
-              to="/setting"
+              to="/setting/profile"
             >
               <button>
                 <Setting className="menu_item" />
