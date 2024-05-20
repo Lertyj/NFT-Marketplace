@@ -8,9 +8,6 @@
 .save{
     padding: 0.6em 2em;
 }
-.twice_purple, .twice_red{
-    width: 45%;
-}
 .twice_red{
     background: var(--second-button-background);
 }

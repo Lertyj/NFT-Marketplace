@@ -45,3 +45,8 @@
         grid-gap: 25px;
     }
 }
+@media screen and (max-width: 360px){
+    .app_wrapper{
+        padding: 0 10px;
+    }
+}

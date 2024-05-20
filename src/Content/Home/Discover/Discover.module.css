@@ -5,7 +5,6 @@
     width: 49%;
     border-radius: 21px;
     color: #FFF;
-    min-width: 383px;
 }
 .content{
     background: rgba(111, 79, 242, 0.50);
@@ -27,7 +26,7 @@
 .buttons{
     display: flex;
     flex-direction: row;
-    max-width: 50%;
+    max-width: 191px;
     justify-content: space-between
 }
 @media screen and (max-width: 1280px){
@@ -43,5 +42,10 @@
 @media screen and (max-width: 768px){
     .discover h2{
         max-width: 100%;
+    }
+}
+@media screen and (max-width: 360px){
+    .content{
+        padding: .7em;
     }
 }

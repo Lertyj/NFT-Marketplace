@@ -15,11 +15,12 @@ button{
     justify-content: space-between;
     align-items: center;
     height: auto;
+    grid-gap:.7em;
 }
 .logo{
     display: none;
-    width: 30px;
-    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
 }
 .search_logo{
     display: flex;
@@ -35,7 +36,7 @@ button{
 .button{
     display: flex;
     flex-direction: column-reverse;
-    padding: 0 .8em;
+    padding: 0 .7em;
 }
 .form{
     display: flex;
@@ -44,6 +45,8 @@ button{
 .input{
     background:none;
     color: var(--fourth-color);
+    width: fit-content;
+    width: 100%;
 }
 .buttons{
     display: flex;
@@ -73,5 +76,18 @@ input:focus, textarea:focus, select:focus {
     .form{
             display: flex;
             padding: 0.4em 0 0.4em 0;
+    }
+    
+}
+
+@media screen and (max-width: 360px){
+    .button{
+        padding: 0 .4em;
+    }
+    .bell{
+        margin: 0 .4em;
+    }
+    .search_logo, .header_content{
+        grid-gap: .4em;
     }
 }

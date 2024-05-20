@@ -68,3 +68,11 @@
         width: 90%;
     }
 }
+@media screen and (max-width: 360px){
+    .nft{
+        width: 95%;
+    }
+    .content{
+        padding: .7em ;
+    }
+}

@@ -59,9 +59,14 @@
         padding-top: 0;
     }
     .item{
-        padding: 0 1em 0 1em;
+        padding: 0 1em;
     }
     .logo{
         display: none;
+    }
+}
+@media screen and (max-width: 360px){
+    .item{
+        padding: 0 .6em;
     }
 }

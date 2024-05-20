@@ -2,8 +2,6 @@
     width: 40%;
     display: flex;
     flex-direction: column;
-
-    min-width: 420px
 }
 .title{
     display: flex;

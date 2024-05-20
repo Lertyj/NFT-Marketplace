@@ -8,7 +8,7 @@
     max-width:595px;
     min-height: 195px;
     border-radius: 18px;
-    padding: 1em 1.5em 1em 1em;
+    padding: 1em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -98,5 +98,10 @@
         flex-direction: column;
         max-height: 100%;
         align-items:normal
+    }
+}
+@media screen and (max-width: 360px){
+    .content{
+        padding: .7em;
     }
 }

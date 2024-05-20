@@ -7,7 +7,6 @@
 
 }
 .bids{
-    min-width: 290px;
     width: 25%;
 }
 .graphics {
@@ -25,9 +24,8 @@
 .cards {
     display: flex;
     flex-direction: column;
-    height: 330px;
-    min-width: 290px;
     justify-content: space-between;
+    grid-gap:1em;
 }
 .price{
     width: 42%;
@@ -48,7 +46,7 @@
     display: flex;
     flex-direction: column;
     background: var(--second-background);
-    padding: 5px 25px 15px 25px;
+    padding: 1em;
     border-radius: 18px;
     text-wrap: nowrap;
     align-items: center;
@@ -57,14 +55,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 2em;
+    margin-top: 1em;
 }
 .data p{
     display: flex;
     align-items:center;
-}
-.data_cancel{
-    margin-left: .8em;
 }
 .data span{
     display: inline-block;
@@ -77,7 +72,8 @@
 .data_sold{
     background: #6F4FF2;
 }
-.dara_cancel{
+.data_cancel{
+    margin-left: .8em;
     background:rgba(111,79,242,.1);
 }
 
@@ -103,5 +99,18 @@
     }
     .bids{
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .data_cancel{
+        margin: 0;
+    }
+    .data{
+        grid-gap:0.7em;
+        flex-direction: column;
+    }
+    .statistics_content{
+        padding: 1em 0;
     }
 }

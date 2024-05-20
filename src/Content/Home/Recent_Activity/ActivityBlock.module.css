@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 20px;
+    padding: 1em 1.25em;
 }
 .content{
     display: flex;
@@ -14,8 +14,8 @@
     max-width: 43px;
 }
 .information{
-    margin-left: 16px;
-    text-wrap:nowrap;
+    margin-left: 1em;
+    text-wrap:wrap;
 }
 .time{
     text-wrap: nowrap;
@@ -23,6 +23,14 @@
 }
 @media screen and (max-width: 1280px){
     .wrapper{
-        padding: 16px;
+        padding: 1em;
+    }
+}
+@media screen and (max-width: 360px){
+    .wrapper{
+        padding: .5em;
+    }
+    .information{
+        margin-left: .5em;
     }
 }
