@@ -68,3 +68,8 @@
         width: 100%;
     }
 }
+@media screen and (max-width: 360px){
+    .user_profile_container, .update_profile_container, .personal_information_container{
+        padding: .7em;
+    }
+}
