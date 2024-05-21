@@ -19,3 +19,9 @@
         min-width: 300px;
     }
 }
+@media screen and (max-width: 360px){
+    .item{
+        min-width: 0;
+        width: 98%;
+    }
+}
