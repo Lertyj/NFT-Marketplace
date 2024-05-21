@@ -35,6 +35,10 @@
 }
 @media screen and (max-width: 576px){
     .wrapper{
-        width: 90%;
+        width: 100%;
+    }
+    .container{
+        padding: .7em;
+        
     }
 }

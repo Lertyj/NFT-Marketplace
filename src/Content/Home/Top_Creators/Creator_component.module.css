@@ -28,3 +28,11 @@
     display: flex;
     flex-direction: column;
 }
+@media screen and (max-width: 360px){
+    .container{
+        padding:.7em;
+    }
+    .information{
+        margin-left: .4em;
+    }
+}

@@ -80,5 +80,10 @@
     .cards{
         justify-content: center;
     }
-
+    .authentication{
+        max-width: 100%;
+    }
+    .information{
+        width: 100%;
+    }
 }
