@@ -4,7 +4,7 @@ import { ReactComponent as SearchImage } from "../icons/searchimage.svg";
 import { ReactComponent as ProfileImage } from "../icons/profile-icon.svg";
 import { ReactComponent as BellImage } from "../icons/bellimage.svg";
 import Logo from "../icons/logo.svg";
-import ThemeManager from "../ThemeManager/ThemeManager";
+import ThemeSelector from "../ThemeManager/ThemeSelector";
 
 function Header() {
   return (
@@ -34,7 +34,7 @@ function Header() {
         </div>
 
         <div className={styles.buttons}>
-          <ThemeManager />
+          <ThemeSelector />
           <button className={styles.bell}>
             <BellImage className="svg" />
           </button>
