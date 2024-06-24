@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./App.module.css";
 import Header from "../Header/Header";
 import SideBar from "../SideBar/SideBar";
@@ -15,54 +15,44 @@ import APISetting from "../Content/Setting/Tabs/APISetting/APISetting";
 import PaymentMethodSetting from "../Content/Setting/Tabs/PaymentMethodSetting/PaymentMethodSetting";
 import ActivitySetting from "../Content/Setting/Tabs/ActivitySetting/ActivitySetting";
 import SecuritySetting from "../Content/Setting/Tabs/SecuritySetting/SecuritySetting";
-import { ThemeContext } from "../ThemeManager/ThemeContext";
 import ThemeManager from "../ThemeManager/ThemeManager";
-const themeManager = new ThemeManager();
 function App() {
-  const [theme, setTheme] = useState<string>("dark");
+  const themeManager = new ThemeManager();
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div
-        className={`${styles.app_container} app`}
-        data-theme={themeManager.getCurrentTheme()}
-      >
-        <div className={styles.app_wrapper}>
-          <Router>
-            <Header />
-            <SideBar />
-            <div className={styles.app_wrapper_content}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/bid" element={<Bid />} />
-                <Route path="/heart" element={<Saved />} />
-                <Route path="/collection" element={<Collection />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/setting" element={<Setting />}>
-                  <Route path="/setting/profile" element={<ProfileSetting />} />
-                  <Route
-                    path="/setting/application"
-                    element={<ApplicationSetting />}
-                  />
-                  <Route
-                    path="/setting/security"
-                    element={<SecuritySetting />}
-                  />
-                  <Route
-                    path="/setting/activity"
-                    element={<ActivitySetting />}
-                  />
-                  <Route
-                    path="/setting/payment"
-                    element={<PaymentMethodSetting />}
-                  />
-                  <Route path="/setting/api" element={<APISetting />} />
-                </Route>
-              </Routes>
-            </div>
-          </Router>
-        </div>
+    <div
+      className={`${styles.app_container} app`}
+      data-theme={themeManager.getCurrentTheme()}
+    >
+      <div className={styles.app_wrapper}>
+        <Router>
+          <Header />
+          <SideBar />
+          <div className={styles.app_wrapper_content}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/bid" element={<Bid />} />
+              <Route path="/heart" element={<Saved />} />
+              <Route path="/collection" element={<Collection />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/setting" element={<Setting />}>
+                <Route path="/setting/profile" element={<ProfileSetting />} />
+                <Route
+                  path="/setting/application"
+                  element={<ApplicationSetting />}
+                />
+                <Route path="/setting/security" element={<SecuritySetting />} />
+                <Route path="/setting/activity" element={<ActivitySetting />} />
+                <Route
+                  path="/setting/payment"
+                  element={<PaymentMethodSetting />}
+                />
+                <Route path="/setting/api" element={<APISetting />} />
+              </Route>
+            </Routes>
+          </div>
+        </Router>
       </div>
-    </ThemeContext.Provider>
+    </div>
   );
 }
 

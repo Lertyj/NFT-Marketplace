@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import { ReactComponent as DarkModeImage } from "../icons/darkmode.svg";
 import { ReactComponent as LightModeImage } from "../icons/lightmode.svg";
 import { ReactComponent as MoonSunImage } from "../icons/lightdarkmode.svg";
 import styles from "./ThemeSelector.module.css";
-import { ThemeContext } from "./ThemeContext";
+import { useGlobalContext } from "./ThemeContext";
 
 class ThemeManager {
   currentTheme: string;
@@ -12,10 +12,11 @@ class ThemeManager {
   setTheme: (theme: string) => void;
 
   constructor() {
-    const { theme, setTheme } = useContext(ThemeContext);
+    const { theme, setTheme } = useGlobalContext();
     this.themes = ["dark", "light", "lightdark"];
-    this.currentTheme = theme;
     this.setTheme = setTheme;
+    this.currentTheme = localStorage.getItem("selectedTheme") || theme;
+
     this.themeIcons = {
       dark: <DarkModeImage className={styles.theme_svg} />,
       light: <LightModeImage className={styles.theme_svg} />,
@@ -30,6 +31,7 @@ class ThemeManager {
   setCurrentTheme(theme: string) {
     this.setTheme(theme);
     this.currentTheme = theme;
+    localStorage.setItem("selectedTheme", theme);
   }
 
   getThemes(): string[] {
