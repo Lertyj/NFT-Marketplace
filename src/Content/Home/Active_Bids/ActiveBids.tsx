@@ -20,7 +20,7 @@ interface BidProps {
 
 function ActiveBids({ button }: ActiveBidsProps) {
   const contentRef = useRef<HTMLDivElement | null>(null);
-  const [scrollWidth, setScrollWidth] = useState(0); // Хранение ширины прокрутки
+  const [scrollWidth, setScrollWidth] = useState(0);
 
   useEffect(() => {
     if (contentRef.current) {
@@ -28,12 +28,12 @@ function ActiveBids({ button }: ActiveBidsProps) {
         contentRef.current.scrollWidth - contentRef.current.clientWidth
       );
     }
-  }, [bidsData]); // Устанавливаем ширину прокрутки при изменении данных
+  }, [bidsData]); 
 
   const handleScroll = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (contentRef.current) {
       const scrollValue = Number(event.target.value);
-      contentRef.current.scrollLeft = scrollValue; // Устанавливаем значение scrollLeft
+      contentRef.current.scrollLeft = scrollValue;
     }
   };
 
