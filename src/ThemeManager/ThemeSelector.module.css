@@ -1,19 +1,4 @@
 .theme_manager{
     position: relative;
-}
-.theme_list{
-    position: absolute;
-    top:-5px;
-    left:-5px;
-    display: flex;
-    flex-direction: column;
-    background: var(--second-background);
-    padding: 5px;
-    border-radius:5px;
-}
-.theme_svg{
-    fill: var(--main-fill);
-}
-.theme_list button{
-    padding-bottom: .2em;
+    min-width: 24px;
 }

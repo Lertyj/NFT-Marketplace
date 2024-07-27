@@ -1,29 +1,35 @@
 import React, { useState } from "react";
+import Select from "react-select";
 import styles from "./ThemeSelector.module.css";
 import ThemeManager from "./ThemeManager";
-
+import "./ThemeSelector.css";
 const ThemeSelector = () => {
   const themeManager = new ThemeManager();
-  const [showThemes, setShowThemes] = useState(false);
+  const [selectedTheme, setSelectedTheme] = useState(
+    themeManager.getCurrentTheme()
+  );
+
   const changeTheme = (theme: string) => {
     themeManager.setCurrentTheme(theme);
-    setShowThemes(false);
+    setSelectedTheme(theme);
   };
+
+  const options = themeManager.getThemes().map((theme) => ({
+    value: theme,
+    label: (
+      <div className={styles.option}>{themeManager.getThemeIcon(theme)}</div>
+    ),
+  }));
 
   return (
     <div className={styles.theme_manager}>
-      <button onClick={() => setShowThemes(!showThemes)}>
-        {themeManager.getThemeIcon(themeManager.getCurrentTheme())}
-      </button>
-      {showThemes && (
-        <div className={styles.theme_list}>
-          {themeManager.getThemes().map((theme) => (
-            <button key={theme} onClick={() => changeTheme(theme)}>
-              {themeManager.getThemeIcon(theme)}
-            </button>
-          ))}
-        </div>
-      )}
+      <Select
+        value={options.find((option) => option.value === selectedTheme)}
+        onChange={(option) => changeTheme(option?.value || "")}
+        options={options}
+        className={styles.select}
+        classNamePrefix="react-select"
+      />
     </div>
   );
 };
