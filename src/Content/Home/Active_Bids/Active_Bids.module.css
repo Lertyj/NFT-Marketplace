@@ -1,43 +1,104 @@
-.wrapper{
+.wrapper {
     display: flex;
     flex-direction: column;
     height: auto;
     max-width: 100%;
+    position: relative
 }
-.content{
+
+.content {
     margin-top: 2em;
     overflow-x: auto;
-    max-width: 87lvw;
+    max-width: 86lvw;
 }
-.last{
+
+.last {
     margin-bottom: 0px;
 }
-.table_wrapper{
+
+.table_wrapper {
     width: 100%;
 
 }
-.title{
+
+.title {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
-.content::-webkit-scrollbar{
-    background:none;
+
+.content::-webkit-scrollbar {
+    background: none;
     width: 90%;
     height: 20px;
-    border-radius:13px;
+    border-radius: 13px;
     border: 1px solid #FFFAFA;
 }
-.content::-webkit-scrollbar-thumb{
-    background-color:#FFFAFA;
-    border-radius:13px
+
+.content::-webkit-scrollbar-thumb {
+    background-color: #FFFAFA;
+    border-radius: 13px
 }
-.button{
+
+.button {
     max-width: 144px;
 }
-@media screen and (max-width: 768px){
-    .content{
-        max-width: 92lvw;
+.slider{
+    display: none;
+}
+  
+
+  @media screen and (max-width: 1024px) {
+    .slider {
+        display: block;
+        position: absolute;
+        appearance:none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 100%;
+        height: 20px;
+        background:none;
+        bottom: 6px;
+        left:-5px;
+      }
+      
+      .slider::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 20px;
+        background: none;
+        border-radius: 5px;
+      }
+      
+      .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 10%;
+        height: 20px;
+        background: none;
+      }
+      
+      .slider::-webkit-slider-thumb:hover {
+        background: none;
+      }
+      
+      .slider::-moz-range-track {
+        width: 100%;
+        height: 20px;
+        background: none;
+      }
+      
+      .slider::-moz-range-thumb {
+        width: 1px;
+        height: 20px;
+        background: none;
+      }
+      .slider::-moz-range-thumb:hover {
+        background: none;
+      }
+}
+@media screen and (max-width: 768px) {
+    .content {
+        max-width: 90lvw;
     }
 }
