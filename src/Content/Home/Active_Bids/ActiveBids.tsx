@@ -7,16 +7,6 @@ import { ActiveBid } from "./ActiveBid";
 interface ActiveBidsProps {
   button?: React.ReactNode;
 }
-interface BidProps {
-  nft: string;
-  nft_name: string;
-  nft_owner: string;
-  open_price: string;
-  your_offer: string;
-  avatar: string;
-  recent_offer: string;
-  time: string;
-}
 
 function ActiveBids({ button }: ActiveBidsProps) {
   const contentRef = useRef<HTMLDivElement | null>(null);
@@ -28,7 +18,7 @@ function ActiveBids({ button }: ActiveBidsProps) {
         contentRef.current.scrollWidth - contentRef.current.clientWidth
       );
     }
-  }, [bidsData]); 
+  }, [bidsData]);
 
   const handleScroll = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (contentRef.current) {
