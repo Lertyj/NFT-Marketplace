@@ -1,24 +1,23 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import styles from "./ThemeSelector.module.css";
-import ThemeManager from "./ThemeManager";
+import useThemeManager from "./useThemeManager";
 import "./ThemeSelector.css";
+
 const ThemeSelector = () => {
-  const themeManager = new ThemeManager();
-  const [selectedTheme, setSelectedTheme] = useState(
-    themeManager.getCurrentTheme()
-  );
+  const { currentTheme, themes, setCurrentTheme, getThemeIcon } =
+    useThemeManager();
+
+  const [selectedTheme, setSelectedTheme] = useState(currentTheme);
 
   const changeTheme = (theme: string) => {
-    themeManager.setCurrentTheme(theme);
+    setCurrentTheme(theme);
     setSelectedTheme(theme);
   };
 
-  const options = themeManager.getThemes().map((theme) => ({
+  const options = themes.map((theme) => ({
     value: theme,
-    label: (
-      <div className={styles.option}>{themeManager.getThemeIcon(theme)}</div>
-    ),
+    label: <div className={styles.option}>{getThemeIcon(theme)}</div>,
   }));
 
   return (

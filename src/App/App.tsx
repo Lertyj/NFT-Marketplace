@@ -15,14 +15,14 @@ import APISetting from "../Content/Setting/Tabs/APISetting/APISetting";
 import PaymentMethodSetting from "../Content/Setting/Tabs/PaymentMethodSetting/PaymentMethodSetting";
 import ActivitySetting from "../Content/Setting/Tabs/ActivitySetting/ActivitySetting";
 import SecuritySetting from "../Content/Setting/Tabs/SecuritySetting/SecuritySetting";
-import ThemeManager from "../ThemeManager/ThemeManager";
+import useThemeManager from "../ThemeManager/useThemeManager";
+import { ThemeProvider } from "../ThemeManager/ThemeContext";
+
 function App() {
-  const themeManager = new ThemeManager();
+  const { currentTheme } = useThemeManager();
+
   return (
-    <div
-      className={`${styles.app_container} app`}
-      data-theme={themeManager.getCurrentTheme()}
-    >
+    <div className={`${styles.app_container} app`} data-theme={currentTheme}>
       <div className={styles.app_wrapper}>
         <Router>
           <Header />
@@ -35,18 +35,12 @@ function App() {
               <Route path="/collection" element={<Collection />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/setting" element={<Setting />}>
-                <Route path="/setting/profile" element={<ProfileSetting />} />
-                <Route
-                  path="/setting/application"
-                  element={<ApplicationSetting />}
-                />
-                <Route path="/setting/security" element={<SecuritySetting />} />
-                <Route path="/setting/activity" element={<ActivitySetting />} />
-                <Route
-                  path="/setting/payment"
-                  element={<PaymentMethodSetting />}
-                />
-                <Route path="/setting/api" element={<APISetting />} />
+                <Route path="profile" element={<ProfileSetting />} />
+                <Route path="application" element={<ApplicationSetting />} />
+                <Route path="security" element={<SecuritySetting />} />
+                <Route path="activity" element={<ActivitySetting />} />
+                <Route path="payment" element={<PaymentMethodSetting />} />
+                <Route path="api" element={<APISetting />} />
               </Route>
             </Routes>
           </div>
@@ -56,4 +50,12 @@ function App() {
   );
 }
 
-export default App;
+function RootApp() {
+  return (
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  );
+}
+
+export default RootApp;
